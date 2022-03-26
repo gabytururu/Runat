@@ -5,9 +5,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Bienvenidx a RumboNaturaleza</h1>
+        <h1 style={{color:'green'}}>Bienvenidx a RumboNaturaleza</h1>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Desafío 1 - Crear app en el CLI</p>
+        <p>Desafío 2 - Creando La NavBar</p>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>        
