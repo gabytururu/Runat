@@ -1,0 +1,40 @@
+.NavBar {    
+    background-color: brown;
+    color:white;
+    text-align: center;      
+    min-width: 100vw;    
+    padding-top: 0px;       
+}
+
+ul li {
+    list-style-type: none;
+    display:inline-block;
+    width: 18%;    
+} 
+
+
+.backLinkA {
+    min-width: 100vw;
+    background-color: black;  
+    padding: 15px 0px 15px 0px
+}
+
+.linkA {
+    text-decoration: none;
+    color: white;      
+}
+
+.link {
+    text-decoration:none;
+    color: white;
+    font-family: 'Spectral', serif;
+    font-style: italic;
+    font-weight:bold;
+    text-align: center;     
+}
+
+h2 {
+    font-style: italic;
+    color: black;
+    font-size: 25px;
+}
