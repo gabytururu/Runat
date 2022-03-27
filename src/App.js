@@ -6,16 +6,19 @@ import NavBar from './components/NavBar/NavBar';
 const App = () => {
   
   const styles  = {
-    color: 'green',
+    color: 'aqua',
     backgroundColor: 'black',
     borderRadius: '25%',
     fontSize: '55px'
     }
 
+
+  //etiqueta header modificada - de englobar toda la app a englobar solo el navBar + estilos de class App-header "comentados" para que no apliquen por ahora. 
   return (
     <div className="App">
       <header className="App-header">
         <NavBar />
+      </header>
         <h1 style={{color:'black'}}>Bienvenidx a RumboNaturaleza</h1>   
         <h2>Conoce Las Ofertas de la Semana...</h2>     
         <img src={logo} className="App-logo" alt="logo" />
@@ -28,7 +31,7 @@ const App = () => {
         >
           Learn React
         </a>
-      </header>
+    
     </div>
   );
 }
