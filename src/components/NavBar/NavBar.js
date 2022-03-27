@@ -5,7 +5,7 @@ const NavBar = () => {
     return(                             
                <nav className="NavBar">  
                 
-                <img src="./images/largoDoble (2).png" className="marca"/>
+                <img src="./images/largoDoble (2).png" className="marca" alt="logo Runat"/>
                     <ul>            
                         <li><a className="link" href="">Senderismo</a></li>
                         <li><a className="link" href="">Escalada</a></li>
