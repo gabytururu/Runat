@@ -20,8 +20,9 @@ const App = () => {
         <NavBar />
       </header>
         <h1 style={{color:'black'}}>Bienvenidx a RumboNaturaleza</h1>   
-        <h2>Conoce Las Ofertas de la Semana...</h2>     
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <h2>Conoce Las Ofertas de la Semana...</h2>      */}
+        <h2>Creando Branch D3Landing...</h2>     
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p style={styles}>Desafío 2 - Creando La NavBar</p>        
         <a
           className="App-link"
@@ -30,7 +31,7 @@ const App = () => {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
     
     </div>
   );
