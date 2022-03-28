@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 
+
 // --------------- Modificada Runat -----------------//
 const App = () => {
   
@@ -12,8 +13,7 @@ const App = () => {
       <header className="App-header">
         <NavBar />
       </header>                 
-          <ItemListContainer greeting={'Bienvenidx a RumboNaturaleza'} intro={'Conoce las ofertas del día...'}/>      
-          {/* <h2>Desafío 3 - Creando Landing (CartWidget + ItemsListContainer)</h2>  */}
+          <ItemListContainer greeting={'Bienvenidx a RumboNaturaleza'} intro={'Conoce las ofertas del día...'}/>                        
     </div>
   )   
 } 

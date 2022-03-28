@@ -6,7 +6,7 @@
 }
 
 li, a {
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     font-weight: 500;
     text-decoration: none;
@@ -21,7 +21,7 @@ a:hover {
 
 .marca {
     text-align: left;
-    max-width: 25%;
+    max-width: 50%;
     cursor: pointer
    
 }
