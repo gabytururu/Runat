@@ -11,9 +11,9 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <NavBar />
-      </header>        
-          <h1 className="itemslistcontainer" greetings="Bienvenidx a RumboNaturaleza"></h1>          
-          <h2>Desafío 3 - Creando Landing (CartWidget + ItemsListContainer)</h2> 
+      </header>                 
+          <ItemListContainer greeting={'Bienvenidx a RumboNaturaleza'} intro={'Conoce las ofertas del día...'}/>      
+          {/* <h2>Desafío 3 - Creando Landing (CartWidget + ItemsListContainer)</h2>  */}
     </div>
   )   
 } 

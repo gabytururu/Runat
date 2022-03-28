@@ -1,3 +1,11 @@
+
+
 .itemslistcontainer {
-    color: yellow
+    color: rgb(6, 128, 101)
+}
+
+.text {
+    color:black;
+    font-style: italic;
+    
 }
