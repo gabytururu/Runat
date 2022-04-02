@@ -1,37 +1,21 @@
-// --------------- Clase 3 Components-----------------//
-
-// ---------- Paso 5 -- Trabajando con PATRONES (De presentación y de Contenedor) -------------------------------//
-// Conecta con Counter.js, con Button.js y con ClassCounter.js
-
+// --------------- CLASE 4 COMPONENTS II ------------------------------
+import React from 'react' //no me queda claro pq agregamos esto si antes ya SXebas dijo q es pesima practica
 import './App.css';
-import NavBar from './components/NavBar/NavBar'
-import ClassNavBar from './components/NavBar/ClassNavBar'
-import Counter from './components/Counter/Counter'
-import Button from './components/Button/Button';
-import ClassCounter from './components/ClassCounter/ClassCounter';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 
 const App = () => {
   
-  const title = "Ecommerce"
-
-  const myFunction = () => {
-
-    console.log("hice click en el boton")
-
-  }
 
   return (
   <>
     <div className="App">      
-      <NavBar name={title}/>  
-      <ClassNavBar name="EjemploClassNavBar" />    
-      <h1>Clase 3 - Componentes I</h1>
-      <Counter />
-      <ClassCounter />
-      <Button callback={myFunction} Label="Mi Boton"/>
-      <ItemListContainer greeting={"hola mundo"} />
+     
+      <ItemListContainer greeting={"hola mundo"}>
+        <button>Boton 1</button>
+        <button>Boton 2</button>
+       
+      </ItemListContainer>      
     </div>
   </>
   );
