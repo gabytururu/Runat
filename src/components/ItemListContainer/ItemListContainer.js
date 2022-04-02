@@ -3,15 +3,13 @@
 
 
 const ItemListContainer = (props) => {
-    console.log(props)
-    console.log(props.greeting)
 
 
     return (
 
         <div>
         <h1>{props.greeting}</h1>
-        {props.children.map( c => <div>{c}</div>)}
+        
         </div>
     )
 }

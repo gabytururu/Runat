@@ -2,7 +2,7 @@
 import React from 'react' //no me queda claro pq agregamos esto si antes ya SXebas dijo q es pesima practica
 import './App.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-
+import Counter from './components/Counter/Counter'
 
 const App = () => {
   
@@ -11,11 +11,9 @@ const App = () => {
   <>
     <div className="App">      
      
-      <ItemListContainer greeting={"hola mundo"}>
-        <button>Boton 1</button>
-        <button>Boton 2</button>
+      <ItemListContainer greeting={"hola mundo"}/>
+      <Counter/>
        
-      </ItemListContainer>      
     </div>
   </>
   );
