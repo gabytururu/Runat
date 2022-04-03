@@ -2,39 +2,38 @@ import  { useState } from 'react';
 
 const Counter = () => {
 
-    console.log(useState())
+    // console.log(useState())
 
-    /* const myState = useState(5) */
-    const [count, setCount] = useState(5)
+// spread operator para facilitar la modificacion de objetos complejos como los arrays u objetos
+    const [count, setCount] = useState({title: 'titulo', count: 0})
 
-
-   /*  console.log(myState) */
-    
+//lo mismo que lo anterior pero cambiando el nombre de ciertas variables para distinguirlo mejor
+    // const [initialState, changingState] = useState({title: 'titulo', count: 0})
 
     const decrement = () => {
-
-       /*  myState[1](myState[0] - 1) */
-        /* lo que se traduce como "change state, a lo que indique el valor inicial de estado menos -" */
-        /* y ahora enotnces puedo ya sustituir los my state por los count y set count de la version desestructurada: */
-        setCount(count -1)
-
+        //llamo al count del array, este me trae el objeto del index0 de use state, ahora selecciono el count que corresponde a la segunda propiedad del objeto ubicado en el index0 del use state, y lo piso para modificarlo al picar el boton de decremento
+        setCount ({...count, count: count.count -1})
+        //lo mismo que lo anterior pero cambiando el nombre de ciertas variables para distinguirlo mejor
+        // changingState ({...initialState, count: initialState.count -1})
     }
-
-    const increment = () => {
-        /* myState[1](myState[0] + 10) */
-        if (count < 10) {
-
-            setCount(count + 1)
-
-        }
-
+    
+    const increment = () => {    
+        
+        //llamo al count del array, este me trae el objeto del index0 de use state, ahora selecciono el count que corresponde a la segunda propiedad del objeto ubicado en el index0 del use state, y lo piso para modificarlo al picar el boton de decremento
+        setCount({...count, count: count.count +1 })           
+        
+        //lo mismo que lo anterior pero cambiando el nombre de ciertas variables para distinguirlo mejor
+        // changingState({...initialState, count: initialState.count +1 })     
+          
     }
-
+    
+    console.log (count)
+    // console.log (initialState)
     return(
 
         <div>
             <button onClick={decrement}>-</button>
-            <p>{count}</p>
+            {/* <p>{count}</p> */}
             <button onClick={increment}>+</button>
         </div>
     )
@@ -43,3 +42,5 @@ const Counter = () => {
 export default Counter
 
 // munuto 47.00
+
+// 48.22 transpiling y jsx
