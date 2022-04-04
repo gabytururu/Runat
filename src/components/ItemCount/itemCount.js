@@ -2,9 +2,7 @@ import { useEffect, useState } from 'react'
 import './ItemCount.css'
 
 
-const ItemCount = (props) => {
-
-    
+const ItemCount = (props) => {    
 
     const [itemCount, changeItemCount] = useState(props.init)   
 
@@ -27,7 +25,7 @@ const ItemCount = (props) => {
                 <p className = "qtyTotal">{itemCount}</p>
                 <button className = "button" onClick={removeProd}>Quitar Productos (-)</button>
                 <button className = "button" onClick={addProd}>Agregar Productos (+)</button>
-                <button className="botonComprar">Finalizar Compra </button>
+                <button className="botonComprar" onClick={() => props.onAdd(itemCount)}>Finalizar Compra </button>
             </div>  
         </div>         
     )
