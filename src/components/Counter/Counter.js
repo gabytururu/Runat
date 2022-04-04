@@ -1,39 +1,30 @@
-import  { useState } from 'react';
+import  { useState, useEffect } from 'react';
 
 
 const Counter = () => {
 
-    // console.log(useState())
+    const [count, setCount] = useState(0)
 
-// spread operator para facilitar la modificacion de objetos complejos como los arrays u objetos
-    // const [count, setCount] = useState({count: 0})
-
-//lo mismo que lo anterior pero cambiando el nombre de ciertas variables para distinguirlo mejor
-    const [initialState, changingState] = useState({title: 'titulo', count: 0})
+    useEffect(() => {
+        console.log('se acaba de montar el componente, yo me espere por el useEffect post mount')        
+    }, [])
 
     const decrement = () => {
-        //llamo al count del array, este me trae el objeto del index0 de use state, ahora selecciono el count que corresponde a la segunda propiedad del objeto ubicado en el index0 del use state, y lo piso para modificarlo al picar el boton de decremento
-        // setCount ({...count, count: count.count -1})
-        //lo mismo que lo anterior pero cambiando el nombre de ciertas variables para distinguirlo mejor
-        changingState ({...initialState, count: initialState.count -1})
+        setCount(count - 1)
     }
     
     const increment = () => {    
-        
-        //llamo al count del array, este me trae el objeto del index0 de use state, ahora selecciono el count que corresponde a la segunda propiedad del objeto ubicado en el index0 del use state, y lo piso para modificarlo al picar el boton de decremento
-        // setCount({...count, count: count.count +1 })           
-        //lo mismo que lo anterior pero cambiando el nombre de ciertas variables para distinguirlo mejor
-        changingState({...initialState, count: initialState.count +1 })     
-          
+        setCount(count + 1)               
     }
-    
-    // console.log (count)
-    console.log (initialState)
+
+    console.log (count)
+    console.log ('se va a montar el componente')
+
     return(
 
         <div>
             <button onClick={decrement}>-</button>
-            <p>{initialState.count}</p>
+            <p>{count}</p>
             <button onClick={increment}>+</button>
         </div>
     )
