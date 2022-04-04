@@ -1,6 +1,3 @@
-// -- Clase 4 -------------------------------------
-//se conecta con app.js
-
 
 const ItemListContainer = (props) => {
 

@@ -1,0 +1,49 @@
+
+.containerGral {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.headerTitle {
+    font-size: 15px;
+    font-weight:500;
+    color: whitesmoke;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(1, 98, 83);
+    border-radius: 5px
+
+}
+
+.qtyContainer {
+   
+    font-size: 26px;
+    font-weight: 700;
+    background-color: rgb(131, 230, 197);
+    max-width: 50%;
+    padding: 19px;
+    border-radius: 5px;
+}
+
+.qtyTotal {
+    background-color: whitesmoke;
+
+}
+
+.button {
+    margin: 6px;
+    padding: 3px;
+    border-radius: solid 2px 5px;
+    width: 47%
+}
+
+.botonComprar {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: gold
+}
