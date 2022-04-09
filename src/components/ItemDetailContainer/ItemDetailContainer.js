@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
-import { getItem } from '../asyncmock/asyncmock'
-import { itemDetail } from 
+import { getItemDetail } from '../asyncmock/asyncmock'
+import ItemDetail from '../ItemDetail/ItemDetail'
 
 const ItemDetailContainer = (props) => {
 
@@ -15,10 +15,11 @@ const ItemDetailContainer = (props) => {
 
 
     return (
-        <div></div>
-
-
-
+        <div>
+            <h1>{props.detallesMsg}</h1>
+            <ItemDetail prodDetails={prodDetails}/>
+        </div>
     )
-
 }
+
+export default ItemDetailContainer
