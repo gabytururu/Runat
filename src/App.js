@@ -10,7 +10,7 @@ const App = () => {
   <>
     <div className="App">           
       <NavBar />
-      <ItemListContainer greeting={"Su lista de opciones"}/>       
+      <ItemListContainer greeting={"Su lista de opciones"} name={'test'}/>       
     </div>
   </>
   );
