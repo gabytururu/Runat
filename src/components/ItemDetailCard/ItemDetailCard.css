@@ -1,0 +1,37 @@
+.imgID {
+    max-width: 90%;    
+    border-radius: 15px;
+    margin-top: 25px
+}
+
+h3, p {
+
+    font-size: 35px;
+    color: black
+}
+
+.boxID {
+    border: 3px solid rgb(0, 135, 99);
+    background-color: rgba(5, 183, 136, 0.115) ;
+    border-radius: 10px;
+    max-width: 30%;
+    display: inline-block;
+    max-height: 60%;
+    margin: 25px 10px;
+       
+}
+
+.botonCompraID {
+    color: white;
+    padding:15px;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: rgb(0, 97, 65);
+    margin-top: 25px
+}
+
+.detallesID {
+    margin-bottom: 45px; 
+    margin-top: 25px;  
+   
+}

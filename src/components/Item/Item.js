@@ -1,4 +1,5 @@
 import './Item.css'
+
 const Item = ({name, img, price}) => {
 
     return(
@@ -17,4 +18,7 @@ const Item = ({name, img, price}) => {
     )
 }
 
-export default Item
+export default Item 
+
+
+
