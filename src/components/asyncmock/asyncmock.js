@@ -15,11 +15,13 @@ export const getProducts = () => {
 }
 
 
-export const getItemDetail = () => {
+export const getItemDetail = (id) => {
     return new Promise (resolve => {
         setTimeout(() => {
-            resolve(products)
-        }, 4000)
+            const productoSeleccionado = products.find(producto => producto.id === parseInt(id)) 
+            console.log("productoSeleccionado", productoSeleccionado) 
+            resolve(productoSeleccionado)
+        }, 500)
     })
 }
 

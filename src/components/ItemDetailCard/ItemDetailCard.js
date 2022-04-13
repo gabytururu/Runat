@@ -1,8 +1,8 @@
-import './ItemDetailCard.css'
+/* import './ItemDetailCard.css' 
 
 const DetailedCard = ({prodDetails}) => {
-
-return (
+ 
+/* return (
 
     <section className="boxID">
     <div className="cardID">
@@ -25,8 +25,8 @@ return (
     </div>
 </section>
 
-)
+) 
 
 }
 
-export default DetailedCard
+export default DetailedCard */

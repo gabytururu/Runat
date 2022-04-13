@@ -8,7 +8,7 @@ const ItemDetailContainer = (props) => {
 
 
     useEffect (() => {
-        getItemDetail().then(items => {
+        getItemDetail(3).then(items => {
             setItemsDetails(items)}
             )
     }, [])
