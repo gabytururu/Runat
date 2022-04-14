@@ -22,7 +22,7 @@ const Details = ({prodDetails}) => {
                     <p>{prodDetails.puntoPartida}</p>
                     <p>{prodDetails.fechas}</p>
                     <p>{prodDetails.reserva}</p>
-                    <button className="botonCompraID">COMPRAR</button>
+                    <button className="botonCompraID">COMPRAR</button>                
                 </div>         
             </div>
         </section>

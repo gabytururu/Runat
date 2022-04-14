@@ -6,23 +6,45 @@ const products = [
     {id: 3, name: 'TourC Sierra Gorda S.L.P', price:120, category: 'senderismo', stock:15, description: 'Tour de 2 días a Sierra Gorda en S.L.P todo incluido', img: '../images/sierraGorda.jpg', serviciosBrindados: 'traslado redondo a la zona de senderismo, equipo de camping, guía de sendero, bastones, aguay alimentos por persona', puntoPartida: 'centro Histórico de Querétaro', reserva: '3 días de antelación', fechas: 'primer sábado de cada mes'}
 ]
 
-export const getProducts = () => {
+
+const categories = [
+    {id: 'biking', description: 'Biking'},
+    {id: 'escalada', description: 'Escalada'},
+    {id: 'senderismo', description: 'Senderismo'}
+]
+
+export const getCategories = () => {
     return new Promise (resolve => {
         setTimeout(() => {
-            resolve(products)
-        }, 2000)
-    })
-}
-
-
-export const getItemDetail = (id) => {
-    return new Promise (resolve => {
-        setTimeout(() => {
-            const productoSeleccionado = products.find(producto => producto.id === parseInt(id)) 
-            console.log("productoSeleccionado", productoSeleccionado) 
-            resolve(productoSeleccionado)
+            resolve(categories)
         }, 500)
     })
 }
 
 
+export const getProducts = (categoryId) => {
+    return new Promise (resolve => {
+        setTimeout(() => {
+            resolve(categoryId ? products.filter(prod => prod.category === categoryId ) : products)
+        }, 500)
+    })
+}
+
+
+// export const getItemDetail = (id) => {
+//     return new Promise (resolve => {
+//         setTimeout(() => {
+//             const productoSeleccionado = products.find(producto => producto.id === parseInt(id)) 
+//             console.log("productoSeleccionado", productoSeleccionado) 
+//             resolve(productoSeleccionado)
+//         }, 300)
+//     })
+// }
+
+export const getItemDetail = (id) => {
+    return new Promise (resolve => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === parseInt(id)))
+        },500)
+    })
+}
