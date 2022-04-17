@@ -29,19 +29,6 @@ const NavBar = (props) => {
                     <Link to='/'>
                         <CartWidget/>
                     </Link>
-                    
-
-
-                    {/* <ul>            
-                        <li><a className="link" href="">Senderismo</a></li>
-                        <li><a className="link" href="">Escalada</a></li>
-                        <li><a className="link" href="">EcoTurismo</a></li>               
-                    </ul>                        */}
-
-                    {/* <Link to='/list' className='botonCompra'>List</Link>
-                    <Link to='/detail' className='botonCompra'>Detail</Link>
-                    <Link to='/nowhere' className='botonCompra'>Otro</Link> */}
-
                 </nav>          
     )      
 }

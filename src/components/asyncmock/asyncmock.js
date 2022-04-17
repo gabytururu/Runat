@@ -31,6 +31,16 @@ export const getProducts = (categoryId) => {
 }
 
 
+//---------- version Sebas---------//
+export const getItemDetail = (id) => {
+    return new Promise (resolve => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === parseInt(id)))
+        },500)
+    })
+}
+
+//---------- version Rodrigo---------//
 // export const getItemDetail = (id) => {
 //     return new Promise (resolve => {
 //         setTimeout(() => {
@@ -40,11 +50,3 @@ export const getProducts = (categoryId) => {
 //         }, 300)
 //     })
 // }
-
-export const getItemDetail = (id) => {
-    return new Promise (resolve => {
-        setTimeout(() => {
-            resolve(products.find(prod => prod.id === parseInt(id)))
-        },500)
-    })
-}
