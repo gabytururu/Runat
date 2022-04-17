@@ -30,7 +30,7 @@ const App = () => {
       </Routes>
       </BrowserRouter>
       {/* <ItemListContainer greeting={"Su lista de opciones"} />
-      <ItemDetailContainer detallesMsg={"Los detalles del producto elegido son:"}/>       */} 
+      <ItemDetailContainer detallesMsg={"Los detalles del producto elegido son:"}/>*/} 
     </div>
   </>
   );
