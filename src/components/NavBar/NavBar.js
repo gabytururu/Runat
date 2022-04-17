@@ -17,16 +17,19 @@ const NavBar = (props) => {
 
     return(                             
                <nav className="NavBar">
-                    <Link to='/'>  
-                        <img src="./images/largoDoble (2).png" className="marca" alt="logo Runat"/>
-                        <h2 className="title">{props.name}</h2>
-                    </Link>
-                    <div>
-                        {categories.map(cat => <NavLink key={cat.id} to={`/category/${cat.id}`} className= {({isActive}) => isActive ? 'botonActive' : ''}>{cat.description}</NavLink>)}
+                    <div>                   
+                        <Link to='/'>  
+                            <img src="../images/logoRunat.png" className="marca" alt="logo Runat"/>
+                            <h2 className="title">{props.name}</h2>
+                        </Link>
                     </div>
                     <div>
+                        {categories.map(cat => <NavLink key={cat.id} to={`/category/${cat.id}`} className= {({isActive}) => isActive ? 'botonActive' : 'botonInactive'}>{cat.description}</NavLink>)}
+                    </div>                    
+                    <Link to='/'>
                         <CartWidget/>
-                    </div>
+                    </Link>
+                    
 
 
                     {/* <ul>            

@@ -10,9 +10,7 @@ li, a {
     color: white;    
     font-weight: 500;
     text-decoration: none;
-    display: inline-block;  
-    padding: 0 20px;
-  
+    display: inline-block;   
 }
 
 a:hover {
@@ -28,8 +26,8 @@ a:hover {
 }
 
 .NavBar {
-    display:flex;
-    justify-content: space-around;
+    display: flex;    
+    justify-content: space-between;
     align-items: center;
     padding: 5px 10%;
     background-color: black;
@@ -37,15 +35,36 @@ a:hover {
    
 }
 
+.NavBar div {    
+    width: 380px;  
+}
+
+.NavBar div:nth-child(1){
+    text-align: left;
+}
+.NavBar div:nth-child(2){
+    text-align: right;
+}
+
+
 .title { 
     color: yellow
 }
 
 .botonActive {
     color: white;
-    padding:15px;
+    padding: 22px;
     font-size: 20px;
     border-radius: 8px;
     background-color: rgb(0, 97, 65);
-    margin-top: 0px
+    
+}
+
+.botonInactive {
+    color: white;
+    padding:22px;
+    font-size: 20px;
+    border-radius: 8px;
+    /* background-color: rgb(0, 97, 65); */
+    
 }
