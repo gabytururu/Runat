@@ -1,18 +1,32 @@
 import './ItemDetail.css'
 import { useState } from 'react'
+import { getMouseEventOptions } from '@testing-library/user-event/dist/utils'
+
+
 
 const InputCount = ({onConfirm, stock, initial=0}) => {
 
     const [count, setCount] = useState(initial)
 
-    const handleChange = ({target}) => {      
-            setCount(target.value)
-        
-        //--version original, no le funciono a Sebas, nunca explicó por que--
-        // if(target.value <= stock && target.value >= 0) {
-        //     setCount(target.value)
-        // }
-    }
+    console.log(stock)
+
+    const handleChange = ({target}) => {  
+            if (target.value <= stock && target.value >=0) {
+                setCount(target.value)
+            } 
+        }    
+
+                    //--version original, no le funciono a Sebas, nunca explicó por que al inicio no funcionaba pero al final lo inserte y si me funcionó--
+            // if(target.value <= stock && target.value >= 0) {
+            //     setCount(target.value)
+            // }
+
+            //sin embargo, el al final usó una sintaxis distinta con el mismo objetivo ytmb le funcionó (revisar yo despues las distinciones)
+            // const handleChange = (e) => {
+            //      if(e.target.value <= stock) {
+            //           setCount(e.target.value)
+            //      }
+            //  }
     
     return (
         <div>
@@ -56,12 +70,38 @@ const ButtonCount = ({ onConfirm, stock, initial = 0 }) => {
 
 }
 
+const Select = ({options = [], onSelect }) => {
+    
+    return (
+        <select onChange = {(e) => onSelect(e.target.value)}>
+            {options.map(o => <option key={o.id} value={o.value}>{o.text}</option>)}            
+        </select>
+    )
+}
+
+const handleSelect = (text) => {
+    console.log(`El color seleccionado es ${text}`)
+}
+
 
 const Details = ({prodDetails}) => {
+    const [typeInput, setTypeInput] = useState(true)
+    //nota se recomienda que el value no sea directo el valor del resultado sino un identificador del valor del resultado.. por ej acá podría ser A, 1, o codigo hex  or #5258 o  etc. de modo que sea un codigo único que te permita representar el valor final pero mediante una referencia de llamado
+    const options = [{id: 1, value: '00f', text: 'Azul'},{id: 2, value: 'f00', text: 'Rojo'}]
+
+    const handleAdd = () => {
+        console.log('Agregar al carrito')
+        
+    }
+
+    const Count = typeInput ? ButtonCount : InputCount
 
     return(
 
         <section className="boxID">
+            <header>
+                <button onClick={() => setTypeInput(!typeInput)}>Cambiar Count</button>
+            </header>
             <div className="cardID">
                 <div className="detallesID">
                     <h3>{prodDetails.name}</h3>
@@ -80,8 +120,8 @@ const Details = ({prodDetails}) => {
                     <button className="botonCompraID">COMPRAR</button>                
                 </div>   
                 <footer className='ItemFooter'>
-                    <InputCount />
-                    <ButtonCount />
+                    <Select options={options} onSelect={handleSelect} />
+                    <Count onConfirm={handleAdd} stock={prodDetails.stock} />                  
                 </footer>      
             </div>
         </section>
