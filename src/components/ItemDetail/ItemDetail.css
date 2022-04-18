@@ -35,3 +35,12 @@ h3, p {
     margin-top: 25px;  
    
 }
+
+.linkCarrito {
+    color: white;
+    background-color: rgb(0, 97, 65);
+    padding: 90px;
+    margin-bottom:20px;
+    border-radius: 5px
+
+}

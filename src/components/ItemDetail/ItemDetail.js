@@ -110,7 +110,7 @@ const Details = ({prodDetails}) => {
                     {/* <button className="botonCompraID">COMPRAR</button>         */}
                 </div>   
                 <footer className='ItemFooter'>                    
-                    {quantity > 0 ? <Link to = '/cart'>Ir al Carrito</Link> : <ItemCount header={'Cantidad de Productos en Carrito'} stock={prodDetails.stock} init={0} onAdd={finalizarCompra}/> }
+                    {quantity > 0 ? <Link to = '/cart' className='linkCarrito'>Ir al Carrito</Link> : <ItemCount header={'¿Para cuántas personas deseas reservar?:'} stock={prodDetails.stock} init={0} onAdd={finalizarCompra}/> }
                     {/* <button onClick={() => onConfirm(count)}>Agregar al carrito</button>         */}
                     {/* <Select options={options} onSelect={handleSelect} />
                     <Count onConfirm={handleAdd} stock={prodDetails.stock} />   */}

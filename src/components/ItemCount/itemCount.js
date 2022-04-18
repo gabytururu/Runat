@@ -34,9 +34,11 @@ const ItemCount = (props) => {
                 <div className = "qtyContainer">
                 <p className = "headerTitle">{props.header}</p>
                 <p className = "qtyTotal">{itemCount}</p>
-                <button className = "button" onClick={removeProd}>Quitar Productos (-)</button>
-                <button className = "button" onClick={addProd}>Agregar Productos (+)</button>
-                <button className="botonComprar" onClick={() => props.onAdd(itemCount)}>Finalizar Compra </button>
+                <div className="countButtonsContainer">
+                    <button className = "button" onClick={removeProd}>Reducir Personas (-)</button>
+                    <button className = "button" onClick={addProd}>Aumentar Personas (+)</button>
+                </div>
+                <button className="botonComprar" onClick={() => props.onAdd(itemCount)}>Finalizar Reservación </button>
             </div>  
         </div>         
     )

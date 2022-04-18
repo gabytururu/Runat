@@ -1,7 +1,8 @@
 
 .containerGral {
     display: flex;
-    justify-content: center;
+    justify-content: center;     
+    background-color: red;
 }
 
 .headerTitle {
@@ -20,25 +21,32 @@
     font-size: 26px;
     font-weight: 700;
     background-color: rgb(131, 230, 197);
-    max-width: 50%;
+    max-width: 100%;
     padding: 19px;
     border-radius: 5px;
 }
 
+.countButtonsContainer{
+    display: flex
+
+}
 .qtyTotal {
-    background-color: red;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding:10px
 
 }
 
 .button {
-    margin: 6px;
-    padding: 3px;
-    border-radius: solid 2px 5px;
-    width: 47%
+    margin: 15px 5px 5px 5px;
+    padding: 8px;
+    border-radius: solid 2px 5px;   
 }
 
 .botonComprar {
     display: inline-block;
+    font-weight: 700;
+    font-size:17px;
     padding: 5px;
     border-radius: 5px;
     width: 100%;
