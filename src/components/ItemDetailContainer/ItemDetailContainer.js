@@ -19,7 +19,7 @@ const ItemDetailContainer = (props) => {
     return (
         <div>
             <h1>{props.detallesMsg}</h1>
-            <ItemDetail prodDetails={prodDetails}/>
+            <ItemDetail prodDetails={prodDetails}/>            
         </div>
     )
 }

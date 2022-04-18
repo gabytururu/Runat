@@ -14,12 +14,12 @@ const App = () => {
     <div className="App">  
       <BrowserRouter> 
       <NavBar />   
-      <Link to='/form' className='botonActive'>Form </Link> 
+      {/* <Link to='/form' className='botonActive'>Form </Link>  */}
       <Routes>
         <Route path="/" element={<ItemListContainer/>} />
         <Route path="/category/:categoryId" element={<ItemListContainer/>} />
         <Route path="/detail/:productId" element={<ItemDetailContainer />} />  
-        <Route path="/form" element={<Form />}/>     
+        {/* <Route path="/form" element={<Form />}/>      */}
       </Routes>
       </BrowserRouter>      
     </div>
