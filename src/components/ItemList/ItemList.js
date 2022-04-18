@@ -2,7 +2,7 @@ import Item from '../Item/Item'
 
 const ItemList = ({products}) => {
     return(
-        <div>
+        <div onClick={() => console.log('hice click al ItemList')}>
             {products.map(prod => <Item key={prod.id} {...prod}/>)}
         </div>
     )

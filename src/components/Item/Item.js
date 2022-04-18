@@ -3,8 +3,17 @@ import { Link } from 'react-router-dom'
 
 const Item = ({id, name, img, price}) => {
 
+    //frenando la propagación a los elementos padres -- por ej como lo hace el corazoncito de favo de mercado libre. contenido en la card del articulo... lo mismo aca
+    const handleClick=(e) => {
+        e.stopPropagation()
+        console.log("hice click al Item")
+    }
+
     return(
-        <section className='box'>
+
+        //el test SIN el stop propagation implicaría que este codigo arranca con:
+        // <section className='box' onClick={() => console.log('hice click al Item')}>
+        <section className='box' onClick={handleClick}>
             <div className='card'>
                 <picture>
                     <img src={img} alt={name} className='img'/>
