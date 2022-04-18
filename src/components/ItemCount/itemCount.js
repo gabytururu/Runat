@@ -4,16 +4,27 @@ import './ItemCount.css'
 
 const ItemCount = (props) => {    
 
-    const [itemCount, changeItemCount] = useState(props.init)   
+    const [itemCount, setItemCount] = useState(props.init)   
 
     const addProd = () => {       
-            if (itemCount < props.stock)
-            changeItemCount(itemCount + 1)
+            if (itemCount <= props.stock) {
+            // console.log(props.stock)
+            // console.log(props.init)
+            setItemCount(itemCount + 1)
+            // console.log(itemCount)
+            } else {
+                console.log ('no hay suficiente inventario')
+            }
         }
 
     const removeProd = () => {      
-        if (itemCount > props.init){
-            changeItemCount (itemCount - 1)
+            if (itemCount > props.init) {
+            // console.log(props.stock)
+            // console.log(props.init)
+            // console.log(itemCount)
+            setItemCount (itemCount - 1)
+            } else {
+                console.log('el inventario  no puede ser menor a cero')
             }
         }
         

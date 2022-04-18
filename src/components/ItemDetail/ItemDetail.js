@@ -1,5 +1,6 @@
 import './ItemDetail.css'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/itemCount'
 
 // const InputCount = ({onConfirm, stock, initial=0}) => {
@@ -75,6 +76,16 @@ const Details = ({prodDetails}) => {
 
     // const Count = typeInput ? ButtonCount : InputCount
 
+    const [quantity, setQuantity] = useState(0)
+
+    const finalizarCompra =  (qtyCounter) => {
+        console.log(`Usted ha agregado un total de ${qtyCounter} productos a su carrito`)
+        console.log(quantity)
+        console.log(qtyCounter)
+        setQuantity(qtyCounter)
+        console.log(quantity)
+    }
+
     return(
 
         <section className="boxID">
@@ -99,7 +110,7 @@ const Details = ({prodDetails}) => {
                     {/* <button className="botonCompraID">COMPRAR</button>         */}
                 </div>   
                 <footer className='ItemFooter'>                    
-                    <ItemCount />
+                    {quantity > 0 ? <Link to = '/cart'>Ir al Carrito</Link> : <ItemCount header={'Cantidad de Productos en Carrito'} stock={prodDetails.stock} init={0} onAdd={finalizarCompra}/> }
                     {/* <button onClick={() => onConfirm(count)}>Agregar al carrito</button>         */}
                     {/* <Select options={options} onSelect={handleSelect} />
                     <Count onConfirm={handleAdd} stock={prodDetails.stock} />   */}
