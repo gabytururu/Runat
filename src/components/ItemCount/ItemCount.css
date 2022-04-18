@@ -1,8 +1,9 @@
 
 .containerGral {
     display: flex;
-    justify-content: center;     
-    background-color: red;
+    justify-content: center;        
+    margin-bottom: 20px;
+    width: 100%;    
 }
 
 .headerTitle {
@@ -16,8 +17,7 @@
 
 }
 
-.qtyContainer {
-   
+.qtyContainer {   
     font-size: 26px;
     font-weight: 700;
     background-color: rgb(131, 230, 197);
