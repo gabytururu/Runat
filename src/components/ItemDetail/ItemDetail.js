@@ -3,7 +3,7 @@ import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/itemCount'
 import CartWidget from '../CartWidget/CartWidget'
-import Context from '../../App'
+import { Context}  from '../../App'
 
 
 const Details = ({id, name, category, description, img, serviciosBrindados, price, puntoPartida, fechas, reserva, stock}) => {
