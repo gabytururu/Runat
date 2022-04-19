@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getCategories } from '../asyncmock/asyncmock'
 
-const NavBar = (props) => {
+const NavBar = () => {
     
     const [categories, setCategories] = useState([])
 
@@ -20,7 +20,10 @@ const NavBar = (props) => {
                     <div>                   
                         <Link to='/'>  
                             <img src="../images/logoRunat.png" className="marca" alt="logo Runat"/>
-                            <h2 className="title">{props.name}</h2>
+
+                            {/* lo borro pq no esta ya haciendo nada, venia por props (eg---> const NavBar =(props) => { xxx} pero claramente es d una version vieja pq ya no trae nada porque el prop name no está siendo brindado en el componente padre) */}
+                            {/* <h2 className="title">{props.name}</h2> */}
+                            
                         </Link>
                     </div>
                     <div>
