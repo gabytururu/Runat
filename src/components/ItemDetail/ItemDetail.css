@@ -30,6 +30,16 @@ h3, p {
     margin-top: 25px
 }
 
+.botonCompraContext {
+    color: white;
+    padding:15px;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: rgb(34, 44, 182);
+    margin: 0px 4px 25px 0px;
+
+}
+
 .detallesID {
     margin-bottom: 45px; 
     margin-top: 25px;  

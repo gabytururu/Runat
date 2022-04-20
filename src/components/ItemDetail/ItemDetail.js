@@ -42,8 +42,8 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
                     <p>{reserva}</p>                   
                 </div>   
                 <footer className='ItemFooter'> 
-                    <button onClick={clearCart}>vaciar carrito</button>                   
-                    <button onClick={removeItem}>Eliminar Este Producto del carrito</button>                   
+                    <button onClick={clearCart} className='botonCompraContext'>vaciar carrito</button>                   
+                    <button onClick={removeItem} className='botonCompraContext'>Eliminar del carrito</button>                   
                     { isInCart(id) ? 
                         <Link to = '/cart' className='linkCarrito'>Ya existe una reservación para este Tour <br></br><br></br>  VER CARRITO</Link>
                         : 
