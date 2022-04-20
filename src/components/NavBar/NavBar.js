@@ -19,11 +19,7 @@ const NavBar = () => {
                <nav className="NavBar">
                     <div>                   
                         <Link to='/'>  
-                            <img src="../images/logoRunat.png" className="marca" alt="logo Runat"/>
-
-                            {/* lo borro pq no esta ya haciendo nada, venia por props (eg---> const NavBar =(props) => { xxx} pero claramente es d una version vieja pq ya no trae nada porque el prop name no está siendo brindado en el componente padre) */}
-                            {/* <h2 className="title">{props.name}</h2> */}
-                            
+                            <img src="../images/logoRunat.png" className="marca" alt="logo Runat"/>                            
                         </Link>
                     </div>
                     <div>
