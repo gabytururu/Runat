@@ -3,7 +3,7 @@ import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/itemCount'
 import CartWidget from '../CartWidget/CartWidget'
-import Context from '../../App'
+import {Context} from '../../App'
 
 //NOTAS:
             //paso 1 -- inserto las importaciones de useContext y la ref context
@@ -34,7 +34,7 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
             // y acá mismo recibo la funcion que me traje por props de setCart, ahora como yo voy a agregar un objeto al seteo del carrito, pues aca mismo declaro el objeto que le voy a pasar al carrito
             //POSTERIORMENTE esta de calaracion la muevo AL INTERIOR de la funcion finalizar compra, para poder ahi mismo tambien setear el carrito (usar el context) incorporando estos valores, es decir, enviandolos al carrito, como antes hice con el nesting pero ahora con el context -- sin embargo el valor de quantity no lo mantiene como parte de la variable objProd, sino como un valor adicional donde iguala la quanity a la qtyCounter  
         const objProd = {
-                id, name, price, quantity, 
+                id, name, price, 
             }            
         //NOTAS: 
                 //y desde acá llamo al objeto que voy a crear cuando decido setear el carrito, con la salvedad y cuidadode tener en cuenta que el setCart es un array, pq asi fue declarado antes...entonces acá mismo, cuando lo llamo, lo llamo respetando la estructura de array que tiene (usando los corchetes. ) 
