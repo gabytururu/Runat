@@ -5,7 +5,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import { useState, createContext } from 'react'
-
+import { CartContextProvider } from './components/Context/CartContext'
 
 export const Context = createContext()
 
@@ -27,7 +27,8 @@ const App = () => {
   <>
     <div className="App">  
       {/* <Context.Provider value={123}> */}
-      <Context.Provider value={{ cart, setCart }}>
+      {/* <Context.Provider value={{ cart, setCart }}> --> eliminado para ejemplo de custom Context*/} 
+      <CartContextProvider>
         <BrowserRouter> 
           <NavBar />        
           <Routes>
@@ -37,8 +38,9 @@ const App = () => {
             {/* <Route path="/detail/:productId" element={<ItemDetailContainer setCart={setCart} cart={cart} />} />  --- elimino para ej de setcontext pa no combinar tecnicas */}
             <Route path="*" element={<h1>404 NOT FOUND</h1>} />        
           </Routes>
-        </BrowserRouter>  
-      </Context.Provider>    
+        </BrowserRouter> 
+      </CartContextProvider> 
+      {/* </Context.Provider>     eliminado para ejemplo de custom context*/}
     </div>
   </>
   );

@@ -1,7 +1,8 @@
 import './Item.css'
-import { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { Context } from '../../App'
+//elimino estas pal ejemplo de custom context
+// import { useContext } from 'react'
+// import { Context } from '../../App'
 
 const Item = ({id, name, img, price}) => {
 
@@ -14,8 +15,9 @@ const Item = ({id, name, img, price}) => {
     //NOTAS:
         //siempre dentro de la funcion useContext, como parametro tengo que pasar la referenciade a qué context estoy intentando acceder.. y esa referencia la tomo de la variable declarada/creada y exportada en app (const Context = createContext()) e importada acá mismo al inicio (la cual importe ademas de importar la funcion useContext -- es decir siempre debo mantener ambas en mis importaciones )
 
-    const value = useContext(Context)
-    console.log(value)
+    //elimino estas para el ejemplo de custom context
+        // const value = useContext(Context)
+        // console.log(value)
 
 
     return(
