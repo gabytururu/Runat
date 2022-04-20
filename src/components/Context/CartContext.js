@@ -10,6 +10,7 @@ const CartContext = createContext()
 export const CartContextProvider = ({ children }) => {
     
     const [cart, setCart] = useState ([])
+    
     console.log(cart)
 
     const addItem = (productToAdd) => {
@@ -25,10 +26,23 @@ export const CartContextProvider = ({ children }) => {
         return qtyCount
     }
 
+    const isInCart = (id) => {
+        return cart.some(prod => prod.id === id)
+    }
+
+    const clearCart = () => {
+        setCart([])
+    }
+
+    const removeItem = (id) => {
+        const products = cart.filter(prod => prod.id !== id)
+        setCart(products)
+    }
+
     return (
         // <CartContext.Provider value= {{cart, setCart}}>
         // pal ejemplo con funciones ya no necesito compartir setCart, sino las funciones que contienen a setCart
-        <CartContext.Provider value= {{cart, addItem, qtyCartWidget}}>
+        <CartContext.Provider value= {{cart, addItem, qtyCartWidget, isInCart, clearCart, removeItem}}>
             {children}
         </CartContext.Provider>
     )

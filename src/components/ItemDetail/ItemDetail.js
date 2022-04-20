@@ -13,33 +13,37 @@ import CartContext  from '../Context/CartContext'
              // Posteriormente, ELIMINO setCart y cart de la lista de props enviadas, para evitar errores ya que ahora estoy también usandolas o trayéndomelas como parte del context y no como props anidadas (justo pa evitar el nesting)
 //
 const Details = ({id, name, category, description, img, serviciosBrindados, price, puntoPartida, fechas, reserva, stock}) => {
-
-    const [quantity, setQuantity] = useState(0)
-    console.log(quantity)
     
-    //TESTS previos:
-        // testeando el uso de useContext y context para verlo en console.logs
-        // const value = useContext(Context)
-        // console.log(value) //-- arroja "undefined en console.log"
-        // console.log(cart) // arroja el array de objetos de reservaciones agregadas
-        // AHORA ENTONCES DESESTRUCTURO CART Y SET CART EN EL LLAMADO DEL CONTEXT -- pero OJO, para poder hacer esto, tengo que eliminarlos de las props iniciales de const details.
-        // const { cart, setCart } = useContext(Context)
-        //ahora con el custom context uso esa referencia (la consumo) en lugar de usar el context provider del ej pasado:
-        // const { cart, setCart } = useContext(CartContext)
-    const { addItem } = useContext(CartContext)
+    // notas:
+        // esto lo puedo borrar a partir de que genero la funcion isInCart, pues ya toda la logica ocurre en el carrito/cartContext y no aquí, aqúi ya solo la consumo
+        // const [quantity, setQuantity] = useState(0)
+        // console.log(quantity)
+        
+        //TESTS previos:
+            // testeando el uso de useContext y context para verlo en console.logs
+            // const value = useContext(Context)
+            // console.log(value) //-- arroja "undefined en console.log"
+            // console.log(cart) // arroja el array de objetos de reservaciones agregadas
+            // AHORA ENTONCES DESESTRUCTURO CART Y SET CART EN EL LLAMADO DEL CONTEXT -- pero OJO, para poder hacer esto, tengo que eliminarlos de las props iniciales de const details.
+            // const { cart, setCart } = useContext(Context)
+            //ahora con el custom context uso esa referencia (la consumo) en lugar de usar el context provider del ej pasado:
+            // const { cart, setCart } = useContext(CartContext)    
+    const { addItem, isInCart } = useContext(CartContext)
     
     const finalizarCompra =  (qtyCounter) => {      
         //TESTS consola (arroja dif numeros***)
         // console.log(qtyCounter)
         // console.log(quantity)   
-        setQuantity(qtyCounter)           
-
+        
         //NOTAS:
-            // y acá mismo recibo la funcion que me traje por props de setCart, ahora como yo voy a agregar un objeto al seteo del carrito, pues aca mismo declaro el objeto que le voy a pasar al carrito
-            //POSTERIORMENTE esta de calaracion la muevo AL INTERIOR de la funcion finalizar compra, para poder ahi mismo tambien setear el carrito (usar el context) incorporando estos valores, es decir, enviandolos al carrito, como antes hice con el nesting pero ahora con el context -- sin embargo el valor de quantity no lo mantiene como parte de la variable objProd, sino como un valor adicional donde iguala la quanity a la qtyCounter  
-            //dato curioso . el quantity de acá se PISA con el quantity del set cart.. por eso seba lo elimina  
+        // y acá mismo recibo la funcion que me traje por props de setCart, ahora como yo voy a agregar un objeto al seteo del carrito, pues aca mismo declaro el objeto que le voy a pasar al carrito
+        //POSTERIORMENTE esta de calaracion la muevo AL INTERIOR de la funcion finalizar compra, para poder ahi mismo tambien setear el carrito (usar el context) incorporando estos valores, es decir, enviandolos al carrito, como antes hice con el nesting pero ahora con el context -- sin embargo el valor de quantity no lo mantiene como parte de la variable objProd, sino como un valor adicional donde iguala la quanity a la qtyCounter  
+        //dato curioso . el quantity de acá se PISA con el quantity del set cart.. por eso seba lo elimina  
+        //este setQuantity lo puedo borrar a partir de que establezco mi función de isInCart, pues ahora la logica de verificacion ocurre en el carrito ... (nunca entendi esto) -- y a la vez tmb puedo borrar arriba la funcion que setea el estado (const = [quanity, setQuantity] = useState(0) -- ya no son necesarias)
+        // setQuantity(qtyCounter)           
         const objProd = {
-                id, name, price, quantity
+                // id, name, price, quantity  --- y ahora tmb borro quantity al eliminar el seteo de quantity,setQuantity que deriva de la incorporacion de la logica isInCart
+                id, name, price, 
             }
                       
         //NOTAS: 
@@ -74,7 +78,8 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
                     <p>{reserva}</p>                   
                 </div>   
                 <footer className='ItemFooter'>                    
-                    {quantity > 0 ? <Link to = '/cart' className='linkCarrito'>Ir al Carrito</Link> : <ItemCount header={'¿Para cuántas personas deseas reservar?:'} stock={stock} init={0} onAdd={finalizarCompra}/> }                               
+                    { isInCart(id)? <Link to = '/cart' className='linkCarrito'>Ir al Carrito</Link> : <ItemCount header={'¿Para cuántas personas deseas reservar?:'} stock={stock} init={0} onAdd={finalizarCompra}/> }                               
+                    {/* {quantity > 0 ? <Link to = '/cart' className='linkCarrito'>Ir al Carrito</Link> : <ItemCount header={'¿Para cuántas personas deseas reservar?:'} stock={stock} init={0} onAdd={finalizarCompra}/> }                                */}
                 </footer>      
             </div>
         </section>
