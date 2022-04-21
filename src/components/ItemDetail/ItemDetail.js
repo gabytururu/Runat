@@ -3,19 +3,32 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/itemCount'
 import CartContext  from '../Context/CartContext'
-
+import NotificationContext from '../Notification/Notification'
 
 
 const Details = ({id, name, category, description, img, serviciosBrindados, price, puntoPartida, fechas, reserva, stock}) => {
         
         const { addItem, isInCart, clearCart, removeItem } = useContext(CartContext)
         
+
+        // PRIMERO me traigo (en imports arriba)la referecia a NotificationContext, y tmb la referencia a useContext que en realidad ya lo venia usando aca por el cartcontext. 
+
+        const { setNotification } = useContext(NotificationContext)
+
+        // luego vengo y agrego los detalles que quiero usar cuando consuma el context y la funcion setNotification que viene del notification context. en este caso indico cual sera la severidad y el mensaje que quiero que salga .. cuando yo le de click a finalizar compra y como ocurrira con ese click pues por eso yo vengo e incluyo esa lógica adentro de esta funcion
+
         const finalizarCompra =  (qtyCounter) => {      
             const objProd = {               
                     id, name, price, 
             }                      
         
             addItem({...objProd, quantity: qtyCounter})
+            // si quiero q sea verde
+            setNotification('success', `Se agregaron ${qtyCounter} ${name} correctamente` )
+
+            //si quiero q sea rojo
+            // setNotification('error', `Se agregaron ${qtyCounter} ${name} correctamente` )
+
         }
 
         const removerProducto = () => {
