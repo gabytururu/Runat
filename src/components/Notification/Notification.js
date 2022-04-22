@@ -1,6 +1,6 @@
 import './Notification.css'
-import { createContext } from 'react'
-import { useState } from 'react'
+import { useState, createContext, useContext } from 'react'
+
 
 // // una vez que está TODO ESTO ESTRUCTURADO yo debo ir a App e insertar el NOTIFICATION PROVIDER para que pueda ser utilizada desde la app y entonces todo lo aquí determinado realmente aplique .
 
@@ -97,4 +97,11 @@ export const NotificationProvider = ({ children }) => {
 
 //   // aunque elimino esta exportacion default, ahora entonces debo asegurarme de si exportar el provider donde queda todo establecido -- y debo exportar tambien LA REFERENCIA al context
 
-  export default NotificationContext
+//por ultimo, si no quiero estar importando el useContext en otras ventanas distintas (eg ItemDetail) una opcion es eliminar este export defaul NotificationContext y sustituirlo por una función que INCLUYA este notificationcontext directo en el llamado de useContext (q hasta ahora no lo ocupo acá sino en el componente ItemDetail), y si yo hago esto lo que ocurre es que en lugar de desglosar o llamar este useContext desde alla, ahora solo tendre que llamar o consumir esta nuevafuncion de useNotification en cualquier lugar donde quiera también integrar este componente
+//  export default NotificationContext
+
+export const useNotification = () => {
+  return useContext (NotificationContext)
+}
+
+//y luego de hacer esto es FUNDAMENTAL sustituir la importacion que tenia yo en itemDetail del default de NotificationContext, por la importacion simplemente de esta funcion entre llaves p evitar q arroje error

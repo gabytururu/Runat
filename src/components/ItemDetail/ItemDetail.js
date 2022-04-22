@@ -3,7 +3,10 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/itemCount'
 import CartContext  from '../Context/CartContext'
-import NotificationContext from '../Notification/Notification'
+// esta de NotificationContext se va cuando yo decido crear la funcion useNotification, entonces sutituyo esta importacion del default, por una importacion especifica entre llaves de la funcion misma
+//import NotificationContext from '../Notification/Notification'
+import { useNotification } from '../Notification/Notification'
+//y despues de importarla pues la consumo acá mismo.
 
 
 const Details = ({id, name, category, description, img, serviciosBrindados, price, puntoPartida, fechas, reserva, stock}) => {
@@ -12,8 +15,13 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
         
 
         // PRIMERO me traigo (en imports arriba)la referecia a NotificationContext, y tmb la referencia a useContext que en realidad ya lo venia usando aca por el cartcontext. 
+        // const { setNotification } = useContext(NotificationContext)
 
-        const { setNotification } = useContext(NotificationContext)
+        //ULTIMO PASO QUE EESTABLECE SEBAS... Indica que --- SI NO QUEREMOS ESTAR IMPORTANDO USE CONTEXT, podemos simplemente asociar el use context a una nueva funcion que es la que será importada en su lugar (en app) y así cuando querramos usar / consumir la notificacion, en lugar de hacer el proceso de importacion de useContext, podemos simplemente consumir la funcion
+        //DUDA -- NO ENTIENDO EN ABSOLUTO en que beneficiaria esto... pareciera estar usando la misma cantidad de codigo... ¿cuál es el sentido de hacer esta aparente anidacion o contención de useContext en la función notification context????) qu<á solo sea que todo el codigo asociado a context se quede alla?? y acá solo lo consumo??-- // en cualquier caso para hacer esto PRIMERO debo ir a NOTIFICATION.JS --- y agregar alla el import de usecontext, luego incorporar el usecontext (este mismo que eliminé de acá ) -->  const { setNotification } = useContext(NotificationContext) --> en una función o nueva referencia (que es la const useNotification que agrego al final del código alla), de modo que ahora acá en lugar de traer el use context me traigo la funcion derivada... es decir allá sustituyo el export default NotificationContext por el const useNotification que estoy creando
+
+        const { setNotification } = useNotification()
+
 
         // luego vengo y agrego los detalles que quiero usar cuando consuma el context y la funcion setNotification que viene del notification context. en este caso indico cual sera la severidad y el mensaje que quiero que salga .. cuando yo le de click a finalizar compra y como ocurrira con ese click pues por eso yo vengo e incluyo esa lógica adentro de esta funcion
 
