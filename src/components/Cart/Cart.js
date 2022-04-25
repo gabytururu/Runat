@@ -6,16 +6,7 @@ import { Link } from 'react-router-dom'
 const Cart = () => {
 
     const { cart, removeItem, sumaTotal } = useContext (CartContext)
-
-
-    //no me esta respetando el formato de list... ver por que
-    //hacer el otro componente llamado itemcart y hacemos lo mismo que el item list
-    //luego abajo hay que mostrar el total de compra
-    //cada item debe tener un control p eliminar items
-
-    const acc = 0 
-
-    //duda, cuando tengo q poner la funcion completa aunq ya exista versus solo llamarla????
+ 
 
     if (cart.length === 0) {
         return (
@@ -28,9 +19,8 @@ const Cart = () => {
         )
     }
 
-    console.log(sumaTotal(cart))
-    
-    //por que no puedo usar template strings.. por ej para insertar esapcios entre los detalles 
+    console.log(sumaTotal(cart))    
+  
     return (
         <div>   
         <h1>¡Gracias Por Tu Compra!</h1>
