@@ -4,10 +4,10 @@
     margin-top: 25px
 }
 
-h3, p {
+/* h1, h2, h3, p {
     color: black;
     font-size: 35px
-}
+} */
 
 .box {
     border: 3px solid rgb(0, 135, 99);
@@ -17,7 +17,7 @@ h3, p {
     display: inline-block;
     max-height: 60%;
     margin: 25px 10px;
-       
+    color: black       
 }
 
 .botonCompra {
@@ -29,8 +29,16 @@ h3, p {
     margin-top: 25px
 }
 
+.card {
+    color: black
+}
+
 .detallesProd {
     margin-bottom: 45px; 
     margin-top: 25px;  
-   
+    color: black   
+}
+
+.p {
+    color: black
 }

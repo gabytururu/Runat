@@ -34,8 +34,18 @@ export const CartContextProvider = ({ children }) => {
         setCart(products)
     }
 
+    const sumaTotal = () => {
+        let sumaCompra = 0
+        cart.forEach ( prod => {
+            sumaCompra = sumaCompra += prod.price*prod.quantity
+        
+        })
+        return sumaCompra
+    }
+
+
     return (        
-        <CartContext.Provider value= {{cart, addItem, qtyCartWidget, isInCart, clearCart, removeItem}}>
+        <CartContext.Provider value= {{cart, addItem, qtyCartWidget, isInCart, clearCart, removeItem, sumaTotal}}>
             {children}
         </CartContext.Provider>
     )

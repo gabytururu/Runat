@@ -1,33 +1,33 @@
 .imgID {
-    max-width: 90%;    
+    max-width: 100%;    
     border-radius: 15px;
-    margin-top: 25px
+    margin-top: 25px;
+    margin-bottom: 25px
 }
 
-h3, p {
 
-    font-size: 18px;
-    color: black
-}
-
-.boxID {
-    border: 3px solid rgb(0, 135, 99);
+.boxID {    
     background-color: rgba(5, 183, 136, 0.115) ;
     border-radius: 10px;
-    max-width: 30%;
+    max-width: 40%;
     display: inline-block;
     max-height: 60%;
     margin: 25px 10px;
+    color: black
        
 }
 
-.botonCompraID {
-    color: white;
-    padding:15px;
-    font-size: 20px;
-    border-radius: 8px;
-    background-color: rgb(0, 97, 65);
-    margin-top: 25px
+.cardID {
+    color: black
+}
+
+.detallesID {
+    margin-bottom: 45px; 
+    margin: 25px;  
+    color: black;   
+    margin-left: 25px;  
+    font-size: 17px;   
+    font-style: italic      
 }
 
 .botonCompraContext {
@@ -40,17 +40,14 @@ h3, p {
 
 }
 
-.detallesID {
-    margin-bottom: 45px; 
-    margin-top: 25px;  
-   
-}
-
 .linkCarrito {
+    display:block;
     color: white;
     background-color: rgb(0, 97, 65);
-    padding: 90px;
-    margin-bottom:20px;
-    border-radius: 5px
-
+    padding: 0px;
+    margin:20px;   
+    border-radius: 5px;
+    max-width: 100%;
+    padding: 18px;  
 }
+

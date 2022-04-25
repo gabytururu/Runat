@@ -65,6 +65,12 @@ a:hover {
     padding:22px;
     font-size: 20px;
     border-radius: 8px;
-    /* background-color: rgb(0, 97, 65); */
-    
+}
+
+.show {
+    visibility: visible;
+}
+
+.noShow {
+    visibility: hidden;
 }

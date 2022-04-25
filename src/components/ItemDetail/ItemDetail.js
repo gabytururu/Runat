@@ -50,12 +50,10 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
                 <div className="detallesID">
                     <h3>{name}</h3>
                     <p>{category}</p>
-                    <p>{description}</p>
-                </div>
-                <picture>
-                    <img src={img} alt={name} className="imgID"/>
-                </picture>
-                <div className="detallesID">
+                    <p>{description}</p>                
+                    <picture>
+                        <img src={img} alt={name} className="imgID"/>
+                    </picture>               
                     <p>{serviciosBrindados}</p>
                     <p>{price}</p>
                     <p>{puntoPartida}</p>

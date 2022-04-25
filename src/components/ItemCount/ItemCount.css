@@ -7,48 +7,49 @@
 }
 
 .headerTitle {
-    font-size: 15px;
+    font-size: 12px;
     font-weight:500;
-    color: whitesmoke;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: rgb(1, 98, 83);
+    margin: 10px;    
+    color: black;    
     border-radius: 5px
 
 }
 
-.qtyContainer {   
-    font-size: 26px;
+.qtyContainer {      
     font-weight: 700;
     background-color: rgb(131, 230, 197);
     max-width: 100%;
-    padding: 19px;
+    padding: 10px;
     border-radius: 5px;
 }
 
 .countButtonsContainer{
-    display: flex
-
+    display: block;
+    max-width:100%;   
 }
-.qtyTotal {
-    background-color: whitesmoke;
-    border-radius: 5px;
-    padding:10px
 
+.qtyTotal {
+    background-color: white;
+    border-radius: 5px;
+    padding:10px;
+    color: black;
+    font-size: 38px
 }
 
 .button {
     margin: 15px 5px 5px 5px;
-    padding: 8px;
+    padding: 18px;
     border-radius: solid 2px 5px;   
+    font-size: 25px
 }
 
 .botonComprar {
     display: inline-block;
     font-weight: 700;
-    font-size:17px;
+    font-size:22px;
     padding: 5px;
     border-radius: 5px;
     width: 100%;
-    background-color: gold
+    background-color: gold;
+    padding: 25px
 }
