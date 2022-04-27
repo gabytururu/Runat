@@ -31,6 +31,7 @@ const NavBar = () => {
     //         setCategories(categories)
     //     })
     // }, [])
+    //
 
     
     const {qtyCartWidget} = useContext(CartContext)
