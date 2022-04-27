@@ -5,18 +5,32 @@ import { Link, NavLink} from 'react-router-dom'
 import { useState, useEffect, useContext } from 'react'
 import { getCategories } from '../asyncmock/asyncmock'
 import  CartContext from '../Context/CartContext'
+//importo lo requerido para sustituir mi asyncmock por firebase
+import { firestoreDB } from '../../services/firebase'
+import { getDocs, collection } from 'firebase/firestore'
 
 
 const NavBar = () => {
-    
-   
+       
     const [categories, setCategories] = useState([])
 
+    // version firebase
+
     useEffect(() => {
-        getCategories().then(categories => {
-            setCategories(categories)
-        })
+       getDocs(collection(firestoreDB, 'categories')).then(response => {
+           const categories = response.docs.map( doc => {
+               return { id: doc.id, ...doc.data()}
+           })
+           setCategories(categories)
+       })
     }, [])
+
+    // //sustituyo este useEffect ligado al asyncmock por un useeffect ligado a mi libreria cateogries de firebase
+    // useEffect(() => {
+    //     getCategories().then(categories => {
+    //         setCategories(categories)
+    //     })
+    // }, [])
 
     
     const {qtyCartWidget} = useContext(CartContext)
