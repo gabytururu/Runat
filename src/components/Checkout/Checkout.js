@@ -37,19 +37,20 @@ const Checkout = () => {
             })
     }
 
-    console.log(order)
-
+    
     return (
         <div>
-            <div className='formSection'>
+            <h1>Checkout Final</h1>
+            <div className='formSection'>                
                 <div className='formContainer'>
                     <div className='formHeader'>
                         <h2>¡Gracias por su compra!</h2>
+                        <p>Por favor ingrese los datos para poder generar su # de orden y enviar su factura</p>
                     </div>
                     <div>
                         <form className='form' onSubmit={handleSubmit} >
                             <div className='formInputs'>
-                                <label>test Dato Input:</label>
+                                <label>UserId:</label>
                                 <input type='text' onChange={(e) => {setInput(e.target.value)}} />
                             </div>
                             <div className='formInputs'>
@@ -63,12 +64,13 @@ const Checkout = () => {
                             <div>                
                                 <button type='submit' className='botonCheckout' onClick={() => addDocCollectionCheckout()}>SUBMIT</button>              
                             </div>
+                            <div>
+                                <h4>Muchas Gracias - Su Orden es la Número# :  {order}</h4>
+                                <p className='text'>Enviaremos su información al correo electrónico proporcionado</p>
+                            </div>
                         </form>
                     </div>                
                 </div>
-            </div>
-            <div>
-                <h1>tu orden de compra es{order}</h1>
             </div>
 
             

@@ -9,14 +9,14 @@
 
 
 .formContainer {
-   background-color: #ECB5A4;
+   background-color: rgba(134, 255, 197, 0.712);
    border-radius: 5px; 
    max-width: 100%;
    width: 850px;
    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
    height: 100%;
-   margin-top: 150px;
-   margin-bottom: 100px;
+   margin-top: 20px;
+   margin-bottom: 150px;
 }
 
 .formHeader {
@@ -33,9 +33,7 @@
 
 .formInput {
     margin-bottom: 15px;
-    padding-bottom: 20px;
-    /* position: relative; 
-    porque sus elementos internos seran position absolute??? */
+    padding-bottom: 20px;   
 }
 
 .form input {
@@ -47,17 +45,32 @@
    
 }
 
-h2 {
-    color: white
-}
 
 .botonCheckout {
-    background-color: rgb(253, 75, 75);    
+    background-color: rgb(1, 61, 31);    
     border-radius: 8px;
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 40px;
     font-size: 20px;    
     cursor: pointer;
+    color: white
+}
+
+h2 {
+    color: white
+}
+
+p {
+    color: white
+}
+
+h4 {
     color: black
+}
+
+.text {
+    color: black;
+    font-style: italic;
+    
 }
