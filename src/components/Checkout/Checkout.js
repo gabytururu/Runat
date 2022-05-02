@@ -4,9 +4,8 @@ import { firestoreDB } from '../../services/firebase/index'
 import './Checkout.css'
 
 
-const Checkout = () => {
+const Checkout = () => {    
     
-    //react me pide vincular los eventos con react, usando los estados, es apartir de esto, que react entiende que algo sucedio y que eso tiene impacto en el ciclo de vida 
     const [input, setInput] = useState('')
     const [nombre, setNombre] =useState('')
     const [email, setEmail ] = useState('')
@@ -18,7 +17,7 @@ const Checkout = () => {
         console.log(input)
         console.log(nombre)
         console.log(email)
-        // console.log(order)
+       
     }
 
     const addDocCollectionCheckout = () => {
