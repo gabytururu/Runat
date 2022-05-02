@@ -38,10 +38,17 @@ const NavBar = () => {
                     </div>
                     <div>
                         {categories.map(cat => <NavLink key={cat.id} to={`/category/${cat.id}`} className= {({isActive}) => isActive ? 'botonActive' : 'botonInactive'}>{cat.description}</NavLink>)}
-                    </div>                               
-                    <div className={`${qtyCartWidget === 0 ? 'noShow' : 'show'}`}>
+                    </div>      
+                    {/* Opcion 1 - con correcciones de Ro                          */}
+                    <div className={`${qtyCartWidget() === 0 ? 'noShow' : 'show'}`}>
                         <Link to='/cart'><CartWidget /></Link> 
                     </div>
+                    {/* Opcion2 - como sugerencia alterna de Ro sin tocar ClassName aprendiendo el &&*/}
+                    {/* <div>
+                    { qtyCartWidget()>0&&<Link to='/cart'><CartWidget /></Link> }
+                    </div> */}
+                    {/* Opcion 3 - sugerencia alterna de Ro usando un ternario */}
+                    {/* { qtyCartWidget() >0 ? <Link to='/cart'><CartWidget /></Link> : ''} */}
                 </nav>          
     )      
 }
