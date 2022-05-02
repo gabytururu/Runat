@@ -11,6 +11,7 @@ import { CartContextProvider } from './components/Context/CartContext'
 // import Notification from './components/Notification/Notification'
 import { NotificationProvider } from './components/Notification/Notification'
 import Cart from './components/Cart/Cart'
+import Checkout from './components/Checkout/Checkout'
 
 
 // ya que creé todo en Notification.js vengo acá a consumirlo (en especifico a consumir el provider)
@@ -36,7 +37,8 @@ const App = () => {
               <Route path="/" element={<ItemListContainer/>} />
               <Route path="/category/:categoryId" element={<ItemListContainer/>} />
               <Route path="/detail/:productId" element={<ItemDetailContainer />} />
-              <Route path="/cart" element={<Cart/>} />                            
+              <Route path="/cart" element={<Cart/>} /> 
+              <Route path="/checkout" element={<Checkout/>} />                         
               <Route path="*" element={<h1>404 NOT FOUND</h1>} />   
             </Routes>
           </BrowserRouter> 

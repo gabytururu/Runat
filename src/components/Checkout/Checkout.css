@@ -1,0 +1,63 @@
+.formSection {
+    background-color: #F7F7F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;  
+}
+
+
+.formContainer {
+   background-color: #ECB5A4;
+   border-radius: 5px; 
+   max-width: 100%;
+   width: 850px;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+   height: 100%;
+   margin-top: 150px;
+   margin-bottom: 100px;
+}
+
+.formHeader {
+    background-color: #1C2329;
+    padding: 20px 40px;
+    color: white;
+    border-bottom: 5px solid #7a7a7a;
+}
+
+.form {
+    padding: 30px 50px;
+    
+}
+
+.formInput {
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    /* position: relative; 
+    porque sus elementos internos seran position absolute??? */
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: inherit;
+    
+   
+}
+
+h2 {
+    color: white
+}
+
+.botonCheckout {
+    background-color: rgb(253, 75, 75);    
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;    
+    cursor: pointer;
+    color: black
+}

@@ -175,7 +175,7 @@ const Cart = () => {
             <div className='total'>
                 <h2>Total a Pagar:${sumaTotal()}</h2>
                 <button className='botonAceptar' onClick={() => clearCart()}>VaciarCarrito</button>
-                <Link to='*' className='botonAceptar'>ACEPTAR</Link>
+                <Link to='/checkout' className='botonAceptar'>Aceptar / Checkout</Link>
 
             </div>     
             
