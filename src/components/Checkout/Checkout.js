@@ -1,7 +1,10 @@
-import {useState} from 'react'
+import {useState, useContext } from 'react'
 import { addDoc , collection } from 'firebase/firestore'
 import { firestoreDB } from '../../services/firebase/index'
 import './Checkout.css'
+import CartContext from '../Context/CartContext'
+import { Link } from 'react-router-dom'
+
 
 
 const Checkout = () => {    
@@ -10,6 +13,8 @@ const Checkout = () => {
     const [nombre, setNombre] =useState('')
     const [email, setEmail ] = useState('')
     const [order, setOrder] = useState('')
+
+    const { clearCart } = useContext( CartContext )
     
     const handleSubmit = (e) => {        
         e.preventDefault()
@@ -47,6 +52,7 @@ const Checkout = () => {
                         <p>Por favor ingrese los datos para poder generar su # de orden y enviar su factura</p>
                     </div>
                     <div>
+                    {order===''? 
                         <form className='form' onSubmit={handleSubmit} >
                             <div className='formInputs'>
                                 <label>UserId:</label>
@@ -62,13 +68,17 @@ const Checkout = () => {
                             </div>
                             <div>                
                                 <button type='submit' className='botonCheckout' onClick={() => addDocCollectionCheckout()}>SUBMIT</button>              
-                            </div>
-                            <div>
-                                <h4>Muchas Gracias - Su Orden es la Número# :  {order}</h4>
-                                <p className='text'>Enviaremos su información al correo electrónico proporcionado</p>
-                            </div>
-                        </form>
-                    </div>                
+                            </div> 
+                              
+                        </form>                         
+                    :                   
+                        <div>
+                            <h4>Muchas Gracias - Su Orden es la Número# : {order}</h4>
+                            <p className='text'>Enviaremos su información al correo electrónico proporcionado</p>
+                            <Link to='/' className='botonAceptar' onClick={() => clearCart()}>Aceptar / Checkout</Link>                             
+                        </div>
+                    }    
+                    </div>                                    
                 </div>
             </div>
 
@@ -79,3 +89,11 @@ const Checkout = () => {
 }
 
 export default Checkout
+
+
+// <div>
+// {order!==''&&<h4>Muchas Gracias - Su Orden es la Número# :  {order}</h4>}
+// <p className='text'>Enviaremos su información al correo electrónico proporcionado</p>                            
+// <Link to='/' className='botonAceptar' onClick={() => clearCart()}>Aceptar / Checkout</Link>                             
+
+// </div>

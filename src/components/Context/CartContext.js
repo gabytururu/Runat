@@ -12,6 +12,8 @@ export const CartContextProvider = ({ children }) => {
         setCart([...cart, productToAdd])
     }
 
+    
+
     const qtyCartWidget = () => {
         let qtyCount = 0
         cart.forEach (prod => {

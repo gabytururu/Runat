@@ -11,6 +11,8 @@ const ItemListContainer = (props) => {
     const [products, setProducts] = useState([])
 
     const [ title, setTitle ] = useState()
+    
+
     const { categoryId } = useParams()    
   
     //version firebase:
@@ -34,7 +36,7 @@ const ItemListContainer = (props) => {
     useEffect (() => {
         setTimeout(() => {
             setTitle('Tours a tu alcance(2s delay)')
-        }, 2000)
+        }, 500)
     })
 
     if (products.length === 0) {

@@ -41,8 +41,7 @@
     padding: 10px;
     border-radius: 5px;
     font-family: inherit;
-    
-   
+      
 }
 
 
@@ -57,17 +56,17 @@
     color: white
 }
 
-h2 {
+/* h2 {
     color: white
 }
 
 p {
     color: white
-}
+} */
 
-h4 {
+/* h4 {
     color: black
-}
+} */
 
 .text {
     color: black;

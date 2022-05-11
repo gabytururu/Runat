@@ -23,11 +23,11 @@
 
 .detallesID {
     margin-bottom: 45px; 
-    margin: 25px;  
-    color: black;   
+    margin: 25px;      
     margin-left: 25px;  
     font-size: 17px;   
-    font-style: italic      
+    font-style: italic;
+    color: black      
 }
 
 .botonCompraContext {
@@ -42,7 +42,7 @@
 
 .linkCarrito {
     display:block;
-    color: white;
+    /* color: white; */
     background-color: rgb(0, 97, 65);
     padding: 0px;
     margin:20px;   
@@ -51,3 +51,11 @@
     padding: 18px;  
 }
 
+.description {
+    color:black
+}
+/* 
+.text {
+    color: black;
+    text-transform: uppercase;
+} */

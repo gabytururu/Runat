@@ -4,6 +4,7 @@ import CartContext from '../Context/CartContext'
 import { Link } from 'react-router-dom'
 import { addDoc, collection, Timestamp , updateDoc, doc, deleteField, writeBatch, getDocs, query, where, documentId } from 'firebase/firestore'
 import { firestoreDB } from '../../services/firebase/index'
+import CartItem from '../CartItem/CartItem'
 
 const Cart = () => {
 
@@ -15,10 +16,8 @@ const Cart = () => {
             <div>
               <h1> Carrito Vacío</h1> <br></br> <h2>No has agregado ningún producto</h2> 
               <Link to='/' className='botonVolver'><h3>Seguir comprando</h3></Link>
-            </div>
-               
-            
-        )
+            </div>             
+            )
     }
 
     console.log(sumaTotal(cart))    
@@ -26,27 +25,34 @@ const Cart = () => {
   
     return (
         <div>   
-        <h1>¡Gracias Por Tu Compra!</h1>
+        <h1 className='grcs'>¡Excelente! <br></br>Ya Casi Está Lista tu Aventura </h1>
         <div className='CartTicket'>    
             <div className='header'>
-                <div className='headerTitle'>Tu Carrito</div>
+                <div className='headerTitle'>Carrito : Tours Adquiridos</div>
                 <p>Por favor revisa tu lista de productos<br></br>Si estás de acuerdo con todo acepta para ir al último paso</p></div>        
-                {
-                cart.map (prod => <div key={prod.id}>                   
-                    <div className='ticketContent'>
-                        <strong>Nombre: </strong>{prod.name}<br></br>                        
-                        <strong>Precio: </strong>${prod.price}<br></br>
-                        <strong>Tamaño del Grupo Reservado:   </strong>{prod.quantity} personas<br></br>               
-                        <strong>Subtotal tour {prod.id}:  </strong>${prod.quantity * prod.price} <br></br>
-                        <button className='botonVolver' onClick={() => removeItem(prod.id)}>Quitar</button><br></br>                        
-                    </div>
-                    </div>)
-                }            
+
+                { cart.map (prod => <CartItem key={prod.id} {...prod}/>)}              
+                 
+                
+                {/* ----------Previo map pre div ---------- */}
+                    {/* {
+                    cart.map (prod => <div key={prod.id}>                   
+                        <div className='ticketContent'>
+                            <strong>Nombre: </strong>{prod.name}<br></br>                        
+                            <strong>Precio: </strong>${prod.price}<br></br>
+                            <strong>Tamaño del Grupo Reservado:   </strong>{prod.quantity} personas<br></br>               
+                            <strong>Subtotal :  </strong>USD$ {prod.quantity * prod.price} <br></br>
+                            <button className='botonRemove' onClick={() => removeItem(prod.id)}>Quitar</button><br></br>                        
+                        </div>
+                        </div>)
+                    }             */}
         
-            <div className='total'>
-                <h2>Total a Pagar:${sumaTotal()}</h2>
-                <button className='botonAceptar' onClick={() => clearCart()}>VaciarCarrito</button>
-                <Link to='/checkout' className='botonAceptar'>Aceptar / Checkout</Link>
+            <div className='totalContainer'>
+                <p className='total'>Su pago total es de: USD${sumaTotal()}</p>
+                <div className='botonesFinales'>
+                    <button className='botonVaciar' onClick={() => clearCart()}>Vaciar Carrito</button>
+                    <Link to='/checkout' className='botonAceptar'>Aceptar / Checkout</Link>
+                </div>
 
             </div>                 
           

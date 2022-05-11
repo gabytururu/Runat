@@ -17,8 +17,8 @@ const Item = ({id, name, img, price}) => {
                     <img src={img} alt={name} className='img'/>
                 </picture>
                 <div className='detallesProd'>
-                    <h3>{name}</h3>
-                    <p>${price}USD</p>
+                    <h3 className='tour'>{name}</h3>
+                    <p className='precio'>$ {price} USD</p>
                     <footer>
                         <Link to={`/detail/${id}`} className="botonCompra">Ver detalle</Link>
                     </footer>
