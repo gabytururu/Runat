@@ -1,3 +1,4 @@
+import './ItemListContainer.css'
 import { useState, useEffect } from 'react'
 // import { getProducts } from '../asyncmock/asyncmock'
 import ItemList from '../ItemList/ItemList'
@@ -10,8 +11,11 @@ const ItemListContainer = (props) => {
 
     const [products, setProducts] = useState([])
 
+    const [loading, setLoading] = useState(true)
+    
     const [ title, setTitle ] = useState()
     
+  
 
     const { categoryId } = useParams()    
   
@@ -30,25 +34,44 @@ const ItemListContainer = (props) => {
             })
             console.log(products)
             setProducts(products)
+            setLoading(false)
+            categoryId?setTitle('Tours disponibles de ' + categoryId ):setTitle('Tours de Todas las Actividades a tu Alcance')                    
         })
     }, [categoryId])  
    
-    useEffect (() => {
-        setTimeout(() => {
-            setTitle('Tours a tu alcance(2s delay)')
-        }, 500)
-    })
+    // useEffect (() => {
+    //     setTimeout(() => {
+    //         setTitle('Tours a tu alcance(2s delay)')
+    //     }, 3000)
+    // })
 
-    if (products.length === 0) {
-        return <h1> No hay productos en esta categoría </h1>
-    }
+    // if (products.length === 0) {
+    //     return <h1> No hay productos en esta categoría </h1>
+    // }
 
     return (
 
         <div>
             <h1>{props.greeting}</h1> 
+            <h1 className="titulo">{title}</h1>    
+            {
+            loading?
+            <div className="loader">
+            <h1>Cargando Productos...</h1>
+            <img src="../images/loading.gif" alt="logo Runat"/>
+            </div>
+            :
+            (
+            products.length === 0?
+                <h1>No hay productos en la categoría</h1>
+                :
+                <ItemList products={products} />
+            )
+            }
+
+            {/* <h1>{props.greeting}</h1> 
             <h1>{title}</h1>                  
-            <ItemList products={products}/>
+            <ItemList products={products}/> */}
         </div>
 
     )

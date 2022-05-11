@@ -12,7 +12,7 @@ export const CartContextProvider = ({ children }) => {
         setCart([...cart, productToAdd])
     }
 
-    
+
 
     const qtyCartWidget = () => {
         let qtyCount = 0
@@ -31,7 +31,7 @@ export const CartContextProvider = ({ children }) => {
     }
 
     const removeItem = (id) => {
-        console.log(id)
+        console.log(id + ' removed')
         const products = cart.filter(prod => prod.id !== id)
         setCart(products)
     }

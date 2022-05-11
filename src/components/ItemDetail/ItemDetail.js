@@ -49,11 +49,11 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
                         <p>{reserva}</p>  
                     </div>                 
                 </div>   
-                <footer className='ItemFooter'> 
-                    <button onClick={clearCart} className='botonCompraContext'>vaciar carrito</button>                   
-                    <button onClick={removerProducto} className='botonCompraContext'>Eliminar del carrito</button>                   
+                <footer className='ItemFooter'>                     
                     { isInCart(id) ? 
-                        <Link to = '/cart' className='linkCarrito'>Ya existe una reservación para este Tour <br></br><br></br>  VER CARRITO</Link>
+                        <div><Link to = '/cart' className='linkCarrito'>Ya existe una reservación para este Tour <br></br><br></br>  VER CARRITO</Link><br></br><button onClick={clearCart} className='botonCompraContext'>vaciar carrito</button>                 
+                        <button onClick={removerProducto} className='botonCompraContext'>Eliminar del carrito</button>  
+                        </div>                 
                         : 
                         <ItemCount header={'¿Para cuántas personas deseas reservar?:'} stock={stock} init={0} onAdd={finalizarCompra}/> }                                             
                 </footer>      

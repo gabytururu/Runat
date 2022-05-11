@@ -1,0 +1,14 @@
+.loader {
+    border: 2px solid rgb(25, 97, 73);
+    border-radius: 50%;
+    margin: 350px;
+    padding: 150px
+
+}
+
+.titulo {
+    margin: 100px 0px 75px 0px;
+    text-transform: capitalize;
+    font-size: 40px;
+    color: black
+}
