@@ -45,9 +45,15 @@ export const CartContextProvider = ({ children }) => {
         return sumaCompra
     }
 
+    //---nueva funcion para q aparezca desde la cant en que estoy--
+
+    const quantityProd = (id) => {
+        return cart.find( prod => prod.id === id )?.quantity
+    }
+
 
     return (        
-        <CartContext.Provider value= {{cart, addItem, qtyCartWidget, isInCart, clearCart, removeItem, sumaTotal}}>
+        <CartContext.Provider value= {{cart, addItem, qtyCartWidget, isInCart, clearCart, removeItem, sumaTotal, quantityProd}}>
             {children}
         </CartContext.Provider>
     )

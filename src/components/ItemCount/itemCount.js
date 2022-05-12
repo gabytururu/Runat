@@ -32,7 +32,7 @@ const ItemCount = (props) => {
                     <button className = "button" onClick={removeProd}>Reducir Personas (-)</button>
                     <button className = "button" onClick={addProd}>Aumentar Personas (+)</button>
                 </div>
-                <button className="botonComprar" onClick={() => props.onAdd(itemCount)}>Finalizar Reservación </button>
+                <button className="botonComprar" onClick={() => props.onAdd(itemCount)}>Aceptar</button>
             </div>  
         </div>         
     )

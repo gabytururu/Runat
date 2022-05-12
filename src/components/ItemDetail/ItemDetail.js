@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/itemCount'
 import CartContext  from '../Context/CartContext'
 import { useNotification } from '../Notification/Notification'
+import Cart from '../Cart/Cart'
 
 
 
 const Details = ({id, name, category, description, img, serviciosBrindados, price, puntoPartida, fechas, reserva, stock}) => {
         
-        const { addItem, isInCart, clearCart, removeItem } = useContext(CartContext)
+        const { addItem, isInCart, clearCart, removeItem, cart, quantityProd } = useContext(CartContext)
         
         const { setNotification } = useNotification()
 
@@ -50,12 +51,27 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
                     </div>                 
                 </div>   
                 <footer className='ItemFooter'>                     
-                    { isInCart(id) ? 
-                        <div><Link to = '/cart' className='linkCarrito'>Ya existe una reservación para este Tour <br></br><br></br>  VER CARRITO</Link><br></br><button onClick={clearCart} className='botonCompraContext'>vaciar carrito</button>                 
+                    { isInCart(id) ?                         
+                        <div>
+                            <div className='linkCarrito'>
+                            <p className='reservaPrevia'>Tu Reservación de Este Tour será Para </p>    
+                            { cart.map( p => 
+                            name===p.name?
+                            <div key={p.id} className='reservaPrevia'><button className="botonCambioReserva">-</button> {p.quantity} Personas <button className="botonCambioReserva">+</button></div>
+                            :
+                            '')                            
+                            }                       
+                            <Link to = '/cart' className='botonCompraContext'>IR AL CARRITO</Link>                            
+                            </div>
+                            <br></br><button onClick={clearCart} className='botonCompraContext'>vaciar carrito</button>                 
                         <button onClick={removerProducto} className='botonCompraContext'>Eliminar del carrito</button>  
                         </div>                 
                         : 
-                        <ItemCount header={'¿Para cuántas personas deseas reservar?:'} stock={stock} init={0} onAdd={finalizarCompra}/> }                                             
+                        // <ItemCount 
+                        // header={'¿Para cuántas personas deseas reservar?:'} stock={stock} init={quantityProd(id)} onAdd={finalizarCompra}/> 
+                        <ItemCount 
+                        header={'¿Para cuántas personas deseas reservar?:'} stock={stock} init={0} onAdd={finalizarCompra}/> 
+                    }                                             
                 </footer>      
             </div>
         </section>
@@ -63,4 +79,37 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
 }
 
 export default Details
+
+//---------- VERSION PREVIA DE CONTROL PARA MANIPULACIÓN FOOTER -------- RETURN LIMPIO PREVIO ----------------------//
+
+// return(
+
+//     <section className="boxID">            
+//         <div className="cardID">
+//             <div className="detallesID">
+//                 <h3>{name}</h3>
+//                 <div className="description">
+//                     <p>{category}</p>
+//                     <p>{description}</p>                
+//                     <picture>
+//                         <img src={img} alt={name} className="imgID"/>
+//                     </picture>               
+//                     <p>{serviciosBrindados}</p>
+//                     <p>{price}</p>
+//                     <p>{puntoPartida}</p>
+//                     <p>{fechas}</p>
+//                     <p>{reserva}</p>  
+//                 </div>                 
+//             </div>   
+//             <footer className='ItemFooter'>                     
+//                 { isInCart(id) ? 
+//                     <div><Link to = '/cart' className='linkCarrito'>Ya existe una reservación para este Tour <br></br><br></br>  VER CARRITO</Link><br></br><button onClick={clearCart} className='botonCompraContext'>vaciar carrito</button>                 
+//                     <button onClick={removerProducto} className='botonCompraContext'>Eliminar del carrito</button>  
+//                     </div>                 
+//                     : 
+//                     <ItemCount header={'¿Para cuántas personas deseas reservar?:'} stock={stock} init={0} onAdd={finalizarCompra}/> }                                             
+//             </footer>      
+//         </div>
+//     </section>
+// )
 
