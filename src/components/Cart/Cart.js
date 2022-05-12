@@ -14,8 +14,8 @@ const Cart = () => {
     if (cart.length === 0) {
         return (
             <div className='carritoVacio'>
-              <h1>Tu Carrito Está Vacío</h1> <br></br> <h2>Vuelve al inicio y continúa viendo Tours</h2> 
-              <Link to='/' className='botonVolver'><h3>Volver al Inicio</h3></Link>
+              <h1>Tu Carrito Está Vacío</h1> <br></br> <h2>Continúa viendo Tours...</h2> 
+              <Link to='/' className='botonAceptar'><h3>Ir al Inicio</h3></Link>
             </div>             
             )
     }
@@ -25,11 +25,11 @@ const Cart = () => {
   
     return (
         <div>   
-        <h1 className='grcs'>¡Excelente! <br></br>Ya Casi Está Lista tu Aventura </h1>
+        <h1 className='msjCierre'>¡Excelente! <br></br>Ya Casi Está Lista tu Aventura </h1>
         <div className='CartTicket'>    
-            <div className='header'>
-                <div className='headerTitle'>Carrito : Tours Adquiridos</div>
-                <p>Por favor revisa tu lista de productos<br></br>Si estás de acuerdo con todo acepta para ir al último paso</p></div>        
+        {/* <div className='headerTitle'>Tours en tu Carrito</div> */}
+            <div className='header'>                
+                <p>Por favor revisa los tours adquiridos.<br></br>Si estás de acuerdo elige ACEPTAR para ir al último paso</p></div>        
 
                 { cart.map (prod => <CartItem key={prod.id} {...prod}/>)}              
                  
@@ -48,10 +48,13 @@ const Cart = () => {
                     }             */}
         
             <div className='totalContainer'>
-                <p className='total'>Su pago total es de: USD${sumaTotal()}</p>
+                <p className='total'>Tu pago total será de ${sumaTotal()} USD</p>    
+                    {/* <button className='botonVaciar' onClick={() => clearCart()}>Vaciar Carrito</button>
+                    <Link to='/checkout' className='botonAceptar'>Aceptar / Checkout</Link> */}
+               
                 <div className='botonesFinales'>
                     <button className='botonVaciar' onClick={() => clearCart()}>Vaciar Carrito</button>
-                    <Link to='/checkout' className='botonAceptar'>Aceptar / Checkout</Link>
+                    <Link to='/checkout' className='botonAceptar'>Aceptar</Link>
                 </div>
 
             </div>                 

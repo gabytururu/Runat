@@ -1,44 +1,86 @@
-.imgID {
-    max-width: 100%;    
-    border-radius: 15px;
-    margin-top: 25px;
-    margin-bottom: 25px
-}
-
-
 .boxID {    
     background-color: rgba(5, 183, 136, 0.115) ;
     border-radius: 10px;
-    max-width: 40%;
-    display: inline-block;
-    max-height: 60%;
-    margin: 25px 10px;
-    color: black
-       
+    max-width: 80%;
+    display: inline-block;  
+    margin: 15px;
+    color: black;   
+    border-top: 5px solid gold;
+    border-bottom: 5px solid gold
+
 }
 
 .cardID {
-    color: black
+    color: black;  
+    max-width:100%;
+    display: flex;    
+    
 }
 
-.detallesID {
-    margin-bottom: 45px; 
-    margin: 25px;      
-    margin-left: 25px;  
-    font-size: 17px;   
-    font-style: italic;
-    color: black      
+/* ------------- itemDetails (left -side-card)  --------------- */
+ 
+.itemDetails {   
+    font-size: 25px;     
+    color: black;   
+    margin-top: 25px;
+    margin-bottom: 25px
+}   
+
+
+.imgID {
+    max-width: 60%;     
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 8px;   
 }
+
+.descriptionGral h3 {
+    color:black;
+    font-size: 26px;
+    text-transform: capitalize;  
+    line-height: 1.7;  
+}
+
+.descriptionGral p {    
+    color:black;
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;  
+}
+
+.descriptionSpec {    
+    margin: 0px 10px 0px 10px;  
+    padding: 8px 0px 8px 0px;  
+    background-color: #2b5742;
+    border-radius: 8px;
+    color:white;
+    font-size: 13px;    
+    line-height: 1.6;
+    text-transform:initial;       
+}
+
+/* ------------- itemCounter (right-side-card) ---------------  */
+
 
 .botonCompraContext {
     color: white;
     padding:15px;
     font-size: 20px;
     border-radius: 8px;
-    background-color: rgb(34, 44, 182);
+    background-color: gold;
     margin: 0px 4px 25px 0px;
 
 }
+
+.botonCambios {
+    color: white;
+    padding:15px;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: blue;
+    margin: 0px 4px 25px 0px;
+}
+
 
 .linkCarrito {
     display:block;
@@ -51,9 +93,7 @@
     padding: 18px;  
 }
 
-.description {
-    color:black
-}
+
 /* 
 .text {
     color: black;

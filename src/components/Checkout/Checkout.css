@@ -1,57 +1,76 @@
 .formSection {
-    background-color: #F7F7F9;
+    /* background-color: #F7F7F9; */
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    margin-top:40px;
     justify-content: center;
-    min-height: 100vh;
-    min-width: 100vw;  
+    /* min-height: 400px; */
+    /* min-width: 800px;   */
 }
 
 
 .formContainer {
-   background-color: rgba(134, 255, 197, 0.712);
+   /* background-color: rgb(227, 255, 236); */
+   background-color: rgba(5, 183, 136, 0.115);  
+   /* background-color: rgba(134, 255, 197, 0.712); */
    border-radius: 5px; 
    max-width: 100%;
-   width: 850px;
+   width: 1050px;
    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-   height: 100%;
-   margin-top: 20px;
-   margin-bottom: 150px;
+   /* height: 100%; */
+   /* margin-top: 0px; */
+   /* margin-bottom: 150px; */
+   border-top: 7px solid gold;
+   border-bottom: 7px solid gold;
 }
 
 .formHeader {
+    margin-top:1px;
     background-color: #1C2329;
-    padding: 20px 40px;
-    color: white;
-    border-bottom: 5px solid #7a7a7a;
+    padding: 10px 20px;
+    color: whitesmoke;
+    font-size: 18px;
+    line-height: 1.6;    
+    border-bottom: 5px solid #7a7a7a;    
 }
 
+.msjHeader{
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif
+}
+
+
 .form {
-    padding: 30px 50px;
+    padding: 20px 20px;
     
 }
 
-.formInput {
-    margin-bottom: 15px;
-    padding-bottom: 20px;   
+.formInputs {
+    margin-bottom: 18px;    
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    /* padding-bottom: 2px;    */
 }
 
 .form input {
     width: 100%;
-    padding: 10px;
+    margin-top:4px;    
+    padding: 9px;
     border-radius: 5px;
-    font-family: inherit;
-      
+    font-family: inherit;  
+    font-size: 17px    
 }
 
 
 .botonCheckout {
     background-color: rgb(1, 61, 31);    
     border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    font-size: 20px;    
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 17px;    
     cursor: pointer;
     color: white
 }
@@ -68,8 +87,26 @@ p {
     color: black
 } */
 
+.orderNumberMsj{
+   margin-top: 20px;
+   margin-bottom:20px;
+   font-size: 28px
+}
+
+.orderNumber{
+    margin: 55px 55px;   
+    border-top: 3px dotted #386951;
+    border-bottom: 3px dotted #386951;
+    padding: 22px;
+    font-size: 28px;
+    font-weight: 800;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .text {
     color: black;
     font-style: italic;
+    font-size: 22px;
+    margin-bottom: 35px
     
 }

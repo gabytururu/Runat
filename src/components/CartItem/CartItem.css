@@ -1,6 +1,6 @@
 
 .ticketContent{
-    font-size: 20px;
+    font-size: 17px;
     border-bottom: dotted 4px black;
     margin-top: 35px;
    
@@ -9,8 +9,9 @@
 .botonRemove {
     background-color: rgb(0, 207, 152);     
     border-radius: 8px;
-    padding: 20px;
+    padding: 12px;
     margin-top: 20px;
+    width: 180px;
     margin-bottom: 40px;
     font-size: 20px;    
     cursor: pointer;

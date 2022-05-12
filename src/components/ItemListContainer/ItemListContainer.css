@@ -7,8 +7,8 @@
 }
 
 .titulo {
-    margin: 100px 0px 75px 0px;
-    text-transform: capitalize;
+    margin: 40px 0px 45px 0px;
+    text-transform: initial;
     font-size: 40px;
     color: black
 }

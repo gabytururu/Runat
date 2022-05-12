@@ -35,7 +35,7 @@ const ItemListContainer = (props) => {
             console.log(products)
             setProducts(products)
             setLoading(false)
-            categoryId?setTitle('Tours disponibles de ' + categoryId ):setTitle('Tours de Todas las Actividades a tu Alcance')                    
+            categoryId?setTitle('Tours disponibles de ' + categoryId ):setTitle('Todas las Actividades a tu Alcance')                    
         })
     }, [categoryId])  
    

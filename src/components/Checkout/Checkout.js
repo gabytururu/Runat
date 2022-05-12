@@ -44,37 +44,43 @@ const Checkout = () => {
     
     return (
         <div>
-            <h1>Checkout Final</h1>
+            {/* <h1>Checkout Final</h1> */}
             <div className='formSection'>                
-                <div className='formContainer'>
-                    <div className='formHeader'>
-                        <h2>¡Gracias por su compra!</h2>
-                        <p>Por favor ingrese los datos para poder generar su # de orden y enviar su factura</p>
-                    </div>
+                <div className='formContainer'>   
+                <div>                
+                    {order===''?
                     <div>
-                    {order===''? 
-                        <form className='form' onSubmit={handleSubmit} >
-                            <div className='formInputs'>
-                                <label>UserId:</label>
-                                <input type='text' onChange={(e) => {setInput(e.target.value)}} />
-                            </div>
-                            <div className='formInputs'>
-                                <label>Nombre:</label>
-                                <input type='text' onChange={(e) => {setNombre(e.target.value)}} />
-                            </div>
-                            <div className='formInputs'>
-                                <label>email:</label>
-                                <input type='email' onChange={(e) => {setEmail(e.target.value)}} />
-                            </div>
-                            <div>                
-                                <button type='submit' className='botonCheckout' onClick={() => addDocCollectionCheckout()}>SUBMIT</button>              
-                            </div> 
-                              
-                        </form>                         
+                        <div className='formHeader'>
+                            <h2>¡GRACIAS POR CONFIAR EN NOSOTR@S!</h2>
+                        <div className='msjHeader'>                        
+                            <p>Por favor ingresa tus datos para crear tu # clave de reservación</p>
+                        </div> 
+                        </div>
+                            <form className='form' onSubmit={handleSubmit} >
+                                <div className='formInputs'>
+                                    <label>Nombre:</label>
+                                    <input type='text' onChange={(e) => {setInput(e.target.value)}} />
+                                </div>
+                                <div className='formInputs'>
+                                    <label>Teléfono:</label>
+                                    <input type='tel' onChange={(e) => {setNombre(e.target.value)}} />
+                                </div>
+                                <div className='formInputs'>
+                                    <label>email:</label>
+                                    <input type='email' onChange={(e) => {setEmail(e.target.value)}} />
+                                </div>
+                                <div>                
+                                    <button type='submit' className='botonCheckout' onClick={() => addDocCollectionCheckout()}>SUBMIT</button>              
+                                </div>                                 
+                        </form> 
+                    </div>                        
                     :                   
                         <div>
-                            <h4>Muchas Gracias - Su Orden es la Número# : {order}</h4>
-                            <p className='text'>Enviaremos su información al correo electrónico proporcionado</p>
+                             <div className='formHeader'>
+                            <h4 className='orderNumberMsj'>Tu Clave de Reservación es:</h4>
+                            </div>
+                            <p className='orderNumber'>#{order}</p>
+                            <p className='text'>Te enviaremos toda la información al e-mail proporcionado</p>
                             <Link to='/' className='botonAceptar' onClick={() => clearCart()}>Aceptar / Checkout</Link>                             
                         </div>
                     }    

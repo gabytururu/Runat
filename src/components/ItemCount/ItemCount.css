@@ -1,55 +1,100 @@
 
 .containerGral {
-    display: flex;
-    justify-content: center;        
-    margin-bottom: 20px;
-    width: 100%;    
+    /* display: block; */
+    /* justify-content: center;          */
+    /* padding: 50px; */
+    width: 500px;    
+    height: 555px;
+    /* border: 2px dotted black; */
+    /* background-color: blue;  */
+    margin: 15px;  
+    border:2px dotted #2b5742;
+    border-radius: 8px;
 }
 
-.headerTitle {
-    font-size: 12px;
-    font-weight:500;
-    margin: 10px;    
-    color: black;    
-    border-radius: 5px
-
-}
-
-.qtyContainer {      
-    font-weight: 700;
-    background-color: rgb(131, 230, 197);
-    max-width: 100%;
+.qtyContainer {    
+    
+    /* font-weight: 700;
+    background-color: red;
+    /* background-color: rgb(131, 230, 197); */
+    /*max-width: 100%;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 5px; */
+    
 }
 
-.countButtonsContainer{
-    display: block;
-    max-width:100%;   
+
+.numPersonas {
+    background-color: #2b5742;
+    font-size: 22px;
+    /* font-weight: 600;
+    margin-top: 20px; */
+    margin-bottom: 40px;
+    padding: 25px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    /* font-weight:500; */
+    /* margin: 10px;     */
+    color: white;    
+    border-radius: 5px;
+    width: 100%;
+    height: 80px
+
 }
 
 .qtyTotal {
     background-color: white;
-    border-radius: 5px;
+    border-radius: 5px; 
+    border:2px dotted #2b5742;  
+    margin: 50px 30px 50px 30px;
     padding:10px;
     color: black;
-    font-size: 38px
-}
-
-.button {
-    margin: 15px 5px 5px 5px;
-    padding: 18px;
-    border-radius: solid 2px 5px;   
     font-size: 25px
 }
 
-.botonComprar {
+.buttonsCountContainer{
+    display: block;
+    max-width:100%;  
+    height: 164px;
+    /* background-color: orange;    */
+}
+
+.buttonChange {
+    background-color: #2b5742; 
+    font-size: 17px; 
+    line-height: 1.8;   
+    cursor: pointer;
+    color: white;   
+    border: none;
+    border-radius: 8px; 
+    /* font-family: Arial;   */
+    width: 40%;
+    height: 80px;
+    /* padding: 10px; */
+    margin: 45px 15px 40px 15px;  
+ 
+} 
+
+.acceptContainer {
+    background-color: #2b5742; 
+    margin-top:14px;
+    height: 140px;
+    border-radius: 8px;
+    /* display: block;
+    justify-content: center; */
+    
+}
+
+.buttonAccept {
     display: inline-block;
+    justify-content: center;
+    align-items: center;
     font-weight: 700;
     font-size:22px;
-    padding: 5px;
+    padding: 20px;
+    margin-top: 35px;
+    border: none;
     border-radius: 5px;
-    width: 100%;
+    width: 87%;    
     background-color: gold;
-    padding: 25px
-}
+   
+} 
