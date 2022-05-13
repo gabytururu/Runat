@@ -1,6 +1,7 @@
 .Success {
     background-color: green;  
-    padding: 15px;
+    padding: 20px;
+    border-radius: 8px;
     margin-right: 35%;
     /* margin: 100px 385px 0px 0px;  */
     /* width: auto;
@@ -20,7 +21,8 @@
 }
 .Error {
     background-color: red;
-    padding: 15px;
+    border-radius: 8px;
+    padding: 20px;
     margin-right: 35%;
     /* margin: 100px 385px 0px 0px;  */
     /* width: auto;

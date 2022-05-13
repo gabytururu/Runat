@@ -13,8 +13,6 @@ const NavBar = () => {
        
     const [categories, setCategories] = useState([])
 
-    // version firebase
-
     useEffect(() => {
        getDocs(collection(firestoreDB, 'categories')).then(response => {
            const categories = response.docs.map( doc => {
@@ -23,8 +21,6 @@ const NavBar = () => {
            setCategories(categories)
        })
     }, [])
-
-
     
     const {qtyCartWidget} = useContext(CartContext)
     console.log(qtyCartWidget())

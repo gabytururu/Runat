@@ -22,7 +22,9 @@ const ItemListContainer = (props) => {
     //version firebase:
     useEffect (() => {      
         const collectionRef = categoryId 
-        ? query (collection(firestoreDB, 'products'), where('category', '==', categoryId), limit(1))
+        //re haciendola para que no tenga limit en la categoria porque si no no me salen todos sino solo 2
+        ? query (collection(firestoreDB, 'products'), where('category', '==', categoryId),)
+        // ? query (collection(firestoreDB, 'products'), where('category', '==', categoryId), limit(2))
         : collection(firestoreDB, 'products')
 
      

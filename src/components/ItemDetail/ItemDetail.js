@@ -23,10 +23,10 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
         
             addItem({...objProd, quantity: qtyCounter})
        
-            setNotification('success', `Se reservó un tour a ${name} para un grupo de ${qtyCounter} correctamente` )
+            setNotification('success', `¡Listo! Tu reservación a ${name} para ${qtyCounter} persona(s) fué enviada a tu carrito` )
 
             } else {                
-                setNotification('error', `¡Ups! Lo sentimos. No es posible reservar con ${qtyCounter} personas agregadas` )
+                setNotification('error', `¡Uupss! No es posible reservar un tour para ${qtyCounter} personas. Intenta de nuevo` )
             }
 
         }
@@ -58,20 +58,33 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
                 </div>   
                 <div className='itemCounter'>                     
                     { isInCart(id) ?                         
-                        <div>
+                        <div className='border'>
                             <div className='linkCarrito'>
-                            <p className='reservaPrevia'>Tu Reservación de Este Tour será Para </p>    
-                            { cart.map( p => 
-                            name===p.name?
-                            <div key={p.id} className='reservaPrevia'>{p.quantity} Personas </div>
-                            :
-                            '')                            
-                            }                       
-                            <Link to = '/cart' className='botonCompraContext'>IR AL CARRITO</Link>                            
-                            </div>
-                            <br></br>
-                            <button onClick={removerProducto} className='botonCambios'>Modificar Reservación</button>  
-                            <button onClick={clearCart} className='botonCambios'>vaciar carrito</button>                 
+                                <div className='upperSection'>
+                                    <p className='reservaPrevia'><strong>El Tour ya está en tu Carrito:</strong></p>    
+                                    { cart.map( p => 
+                                    name===p.name?
+                                    <div key={p.id} className='reservaPrevia'>{p.name} para {p.quantity} Personas </div>
+                                    :
+                                    '')           
+                                    }  
+                                </div>                                
+                                <div className='middleSection'>
+                                    <p>¿Qué quieres hacer?</p>
+                                    <div className='buttonSection'>
+                                        <Link to = '/cart' className='botonCompraContext'>Ver<br></br>Carrito</Link> 
+                                    </div>
+                                    <div className='buttonSection'>
+                                        <button onClick={removerProducto} className='botonCambios'>Cambiar<br></br>Esta Reservación</button>                      
+                                        <button onClick={clearCart} className='botonCambios'>Vaciar<br></br> Carrito Completo</button>   
+                                    </div>
+                                </div>              
+                            </div> 
+                            <div className='bottomSection'>  
+                                <div className='buttonSection'>                      
+                                    <Link to = '/' className='botonVerTours'>Ver Más Tours</Link>  
+                                </div>
+                            </div>       
                         </div>                 
                         : 
                         // <ItemCount 

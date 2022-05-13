@@ -50,7 +50,7 @@
 
 .descriptionSpec {    
     margin: 0px 10px 0px 10px;  
-    padding: 8px 0px 8px 0px;  
+    padding: 15px 0px 20px 0px;  
     background-color: #2b5742;
     border-radius: 8px;
     color:white;
@@ -61,54 +61,121 @@
 
 /* ------------- itemCounter (right-side-card) ---------------  */
 
+.itemCounter {
+    width: 60%;
+    /* background-color: rgba(5, 183, 136, 0.115); */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    
+}
 
-.botonCompraContext {
+
+.border {
+    border: dotted 2px black;
+    width: 90%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+
+.upperSection {
     color: white;
-    padding:15px;
+    font-size: 18px;
+    background-color: #2b5742;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 0px;    
+    border-radius: 8px;
+}
+
+.middleSection{
+    /* background-color: aqua; */
+    margin-top:0px;
+    font-size: 25px;
+    padding: 10px;
+    line-height: 3;
+    font-weight: 600;
+}
+
+.bottomSection {
+    margin-top: 25px;
+    height: 30%;
+    background-color: #2b5742;
+    padding:0px;
+    border-radius: 8px;
+}
+
+.botonVerTours {    
+    color: black;   
+    padding:25px;
     font-size: 20px;
     border-radius: 8px;
     background-color: gold;
-    margin: 0px 4px 25px 0px;
+    margin: 50px 4px 25px 0px;
+    width: 350px;
+    line-height: 1;  
+}
 
+.buttonSection {
+    display:flex;
+    /* /* align-items: center; */
+    justify-content: center;
+    /* border: dotted 2px black */
 }
 
 .botonCambios {
     color: white;
     padding:15px;
+    font-size: 13px;
+    border-radius: 8px;
+    background-color: rgb(0,97,65);
+    margin: 0px 4px 25px 0px;
+    width: 180px;
+    border: none;
+    cursor:pointer
+    
+}
+    
+.botonCompraContext {
+    color: black;
+    padding:15px;
     font-size: 20px;
     border-radius: 8px;
-    background-color: blue;
+    background-color: gold;
     margin: 0px 4px 25px 0px;
+    width: 180px;
+    line-height: 1;   
+    
 }
 
-
-.linkCarrito {
+/* .linkCarrito {
     display:block;
-    /* color: white; */
+    color: white;
     background-color: rgb(0, 97, 65);
     padding: 0px;
     margin:20px;   
     border-radius: 5px;
     max-width: 100%;
     padding: 18px;  
-}
+} */
 
+
+
+
+
+
+/* 
+.botonCambioReserva {
+    width: 55px;
+    height: 55px;
+    border-radius:50%;
+    font-size: 35px;
+} */
 
 /* 
 .text {
     color: black;
     text-transform: uppercase;
 } */
-
-.reservaPrevia {
-    color: white;
-    font-size: 24px;
-
-}
-
-.botonCambioReserva {
-    width: 55px;
-    height: 55px;
-    border-radius:50%;
-    font-size: 35px;
-}

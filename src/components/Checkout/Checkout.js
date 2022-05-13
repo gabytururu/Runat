@@ -53,7 +53,7 @@ const Checkout = () => {
                         <div className='formHeader'>
                             <h2>¡GRACIAS POR CONFIAR EN NOSOTR@S!</h2>
                         <div className='msjHeader'>                        
-                            <p>Por favor ingresa tus datos para crear tu # clave de reservación</p>
+                            <p>Ingresa tus datos para crear tu # clave de reservación</p>
                         </div> 
                         </div>
                             <form className='form' onSubmit={handleSubmit} >
