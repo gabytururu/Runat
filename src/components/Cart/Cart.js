@@ -15,7 +15,7 @@ const Cart = () => {
         return (
             <div className='carritoVacio'>
               <h1>Tu Carrito Está Vacío</h1>
-              <Link to='/' className='botonAceptar'><h3>Ver Tours Disponibles</h3></Link>
+              <Link to='/' className='botonVerTours'><h3>Ver Tours Disponibles</h3></Link>
             </div>             
             )
     }

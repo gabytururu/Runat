@@ -75,8 +75,8 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
                                         <Link to = '/cart' className='botonCompraContext'>Ver<br></br>Carrito</Link> 
                                     </div>
                                     <div className='buttonSection'>
-                                        <button onClick={removerProducto} className='botonCambios'>Cambiar<br></br>Esta Reservación</button>                      
-                                        <button onClick={clearCart} className='botonCambios'>Vaciar<br></br> Carrito Completo</button>   
+                                        <button onClick={removerProducto} className='botonCambios'>Cambiar<br></br>Reservación</button>                      
+                                        <button onClick={clearCart} className='botonCambios'>Vaciar<br></br> Carrito</button>   
                                     </div>
                                 </div>              
                             </div> 
