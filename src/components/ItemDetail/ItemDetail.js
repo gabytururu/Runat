@@ -35,6 +35,8 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
             removeItem(id)
         }
 
+
+
     return(
 
         <section className="boxID">            
@@ -61,7 +63,7 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
                         <div className='border'>
                             <div className='linkCarrito'>
                                 <div className='upperSection'>
-                                    <p className='reservaPrevia'><strong>El Tour ya está en tu Carrito:</strong></p>    
+                                    <p className='reservaPrevia'><strong>Este tour fue agregado a tu Carrito:</strong></p>    
                                     { cart.map( p => 
                                     name===p.name?
                                     <div key={p.id} className='reservaPrevia'>{p.name} para {p.quantity} Personas </div>
@@ -76,7 +78,7 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
                                     </div>
                                     <div className='buttonSection'>
                                         <button onClick={removerProducto} className='botonCambios'>Cambiar<br></br>Reservación</button>                      
-                                        <button onClick={clearCart} className='botonCambios'>Vaciar<br></br> Carrito</button>   
+                                        <Link to = '/' onClick={clearCart} className='botonCambios'>Vaciar Carrito</Link>                                             
                                     </div>
                                 </div>              
                             </div> 

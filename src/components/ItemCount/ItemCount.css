@@ -96,5 +96,35 @@
     border-radius: 5px;
     width: 87%;    
     background-color: gold;
+    color: black
    
 } 
+
+/* ----------  (right-side-card --- ternary OutOfStock) -----------  */
+
+.outOfStock {
+    background-color: #2b5742;
+    margin: 20px 30px 70px 30px;
+    border-radius: 8px;
+    padding: 40px;
+    color: white;
+    font-size: 20px;
+    line-height: 2;
+    font-weight: 600
+}
+
+.sorry{
+    background-color: white;
+    color: black;
+    font-size: 35px;
+    font-style: bold;
+    border-radius: 8px;
+
+    
+}
+.sadFace {
+    text-align: left;
+    max-width: 25%;
+    cursor: pointer;
+    margin-top: 55px;   
+}

@@ -30,16 +30,18 @@ const ItemListContainer = (props) => {
      
         getDocs(collectionRef).then(response => {
             console.log(response)
-            const products = response.docs.map( doc => {
-         
+            const products = response.docs.map( doc => {         
                 return { id: doc.id, ...doc.data()}
-            })
-            console.log(products)
+            })          
+            
+            console.log(products)            
             setProducts(products)
             setLoading(false)
             categoryId?setTitle('Tours disponibles de ' + categoryId ):setTitle('Todas las Actividades a tu Alcance')                    
         })
     }, [categoryId])  
+
+    
    
     // useEffect (() => {
     //     setTimeout(() => {

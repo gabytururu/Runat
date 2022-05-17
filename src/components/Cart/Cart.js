@@ -11,14 +11,14 @@ const Cart = () => {
 
     const { cart, removeItem, sumaTotal, clearCart } = useContext (CartContext)    
 
-    if (cart.length === 0) {
+       if (cart.length === 0) {
         return (
             <div className='carritoVacio'>
               <h1>Tu Carrito Está Vacío</h1>
               <Link to='/' className='botonVerTours'><h3>Ver Tours Disponibles</h3></Link>
             </div>             
             )
-    }
+        }
 
     console.log(sumaTotal(cart))    
 
@@ -56,6 +56,8 @@ const Cart = () => {
                     <button className='botonVaciar' onClick={() => clearCart()}>Vaciar Carrito</button>
                     <Link to='/checkout' className='botonAceptar'>Aceptar</Link>
                 </div>
+
+
 
             </div>                 
           
