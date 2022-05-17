@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react'
-// import { getItemDetail } from '../asyncmock/asyncmock'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import { firestoreDB } from '../../services/firebase'
@@ -19,9 +18,7 @@ const ItemDetailContainer = () => {
         setItemsDetails(product)
         })
 
-    }, [productId])
-
-    
+        }, [productId])
 
     return (
 

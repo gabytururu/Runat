@@ -15,8 +15,7 @@ return (
 <div key={id}>                   
     <div className='ticketContent'>
         <strong>Nombre: </strong>{name}<br></br>                        
-        <strong>Precio: </strong>${price} USD<br></br>
-        {/* <strong>Category: </strong>{category}<br></br> */}
+        <strong>Precio: </strong>${price} USD<br></br>     
         <strong>Tamaño del grupo:</strong> {quantity} personas<br></br>               
         <strong>Subtotal :  </strong>${quantity * price} USD<br></br>
         <button className='botonRemove' onClick={() => handleRemove(id)}>Quitar</button><br></br>                        

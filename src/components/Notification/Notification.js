@@ -3,13 +3,8 @@ import { useState, createContext, useContext } from 'react'
 
 
  const Notification = ({ message , severity , otherClass = 'Mensaje' }) => {
-    const notificationStyles = {
-        // position: 'absolute',
-        // top: 100,
-        right: severity === 'sucess' ? 5 : 0,            
-        // padding: '10px 20px 10px 20px',
-        // width: 'auto',
-        // height: 'auto',
+    const notificationStyles = {      
+        right: severity === 'sucess' ? 5 : 0,           
     }
     
     if (message === ''){
@@ -23,16 +18,14 @@ import { useState, createContext, useContext } from 'react'
     } : {}
 
 
-    return (
-      
+    return (      
         <div {...config}>        
           {message}
         </div>
       )
     }
 
-
-   const NotificationContext = createContext()
+    const NotificationContext = createContext()
 
 
 export const NotificationProvider = ({ children }) => {
@@ -46,9 +39,7 @@ export const NotificationProvider = ({ children }) => {
       setTimeout(() => {
         setMessage('')
       }, 3000)
-    }
-
-  
+    }  
 
     return (
     <NotificationContext.Provider value = {{ setNotification}}>
@@ -57,8 +48,6 @@ export const NotificationProvider = ({ children }) => {
     </NotificationContext.Provider>
     )
   }
-
- 
 
 export const useNotification = () => {
   return useContext (NotificationContext)

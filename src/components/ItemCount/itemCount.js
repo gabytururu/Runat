@@ -26,11 +26,9 @@ const ItemCount = (props) => {
         
        
     return (            
-        <div className="containerGral">
-                {/* <div className = "qtyContainer"> */}
-                {props.stock > 0 ?
-                <div>
-                    {/* <p className = "headerTitle">{props.header}</p> */}                
+        <div className="containerGral">             
+            {props.stock > 0 ?
+                <div>                       
                     <p className ="numPersonas">{props.header}</p>
                     <p className ="qtyTotal">{itemCount}</p>
                     <div className="buttonsCountContainer">
@@ -41,7 +39,7 @@ const ItemCount = (props) => {
                         <button className="buttonAccept" onClick={() => props.onAdd(itemCount)}>Aceptar</button>
                     </div>
                 </div>  
-                :            
+            :            
                 <div className ="outOfStock">   
                     <div>
                         <p className="sorry">¡Lo Sentimos Mucho!</p>
@@ -49,9 +47,8 @@ const ItemCount = (props) => {
                     <img src= "../images/sad.png" className="sadFace" alt="carita triste"/>
                     <p>Ya no hay espacios disponibles <br></br>en este Tour</p>
                     <Link to='/' className="buttonAccept" >Ver otros tours</Link>
-                </div>                            
-               
-                }
+                </div>                        
+            }
         </div>         
     )
 }

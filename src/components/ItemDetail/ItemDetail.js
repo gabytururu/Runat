@@ -64,11 +64,10 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
                             <div className='linkCarrito'>
                                 <div className='upperSection'>
                                     <p className='reservaPrevia'><strong>Este tour fue agregado a tu Carrito:</strong></p>    
-                                    { cart.map( p => 
-                                    name===p.name?
-                                    <div key={p.id} className='reservaPrevia'>{p.name} para {p.quantity} Personas </div>
+                                    { cart.map( p => name===p.name?
+                                        <div key={p.id} className='reservaPrevia'>{p.name} para {p.quantity} Personas </div>
                                     :
-                                    '')           
+                                        '')           
                                     }  
                                 </div>                                
                                 <div className='middleSection'>
@@ -88,9 +87,7 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
                                 </div>
                             </div>       
                         </div>                 
-                        : 
-                        // <ItemCount 
-                        // header={'¿Para cuántas personas deseas reservar?:'} stock={stock} init={quantityProd(id)} onAdd={finalizarCompra}/> 
+                    :                        
                         <ItemCount 
                         header={'¿Para cuántas personas quieres reservar?'} stock={stock} init={0} onAdd={finalizarCompra}/> 
                     }                                             
@@ -101,37 +98,4 @@ const Details = ({id, name, category, description, img, serviciosBrindados, pric
 }
 
 export default Details
-
-//---------- VERSION PREVIA DE CONTROL PARA MANIPULACIÓN FOOTER -------- RETURN LIMPIO PREVIO ----------------------//
-
-// return(
-
-//     <section className="boxID">            
-//         <div className="cardID">
-//             <div className="detallesID">
-//                 <h3>{name}</h3>
-//                 <div className="description">
-//                     <p>{category}</p>
-//                     <p>{description}</p>                
-//                     <picture>
-//                         <img src={img} alt={name} className="imgID"/>
-//                     </picture>               
-//                     <p>{serviciosBrindados}</p>
-//                     <p>{price}</p>
-//                     <p>{puntoPartida}</p>
-//                     <p>{fechas}</p>
-//                     <p>{reserva}</p>  
-//                 </div>                 
-//             </div>   
-//             <footer className='ItemFooter'>                     
-//                 { isInCart(id) ? 
-//                     <div><Link to = '/cart' className='linkCarrito'>Ya existe una reservación para este Tour <br></br><br></br>  VER CARRITO</Link><br></br><button onClick={clearCart} className='botonCompraContext'>vaciar carrito</button>                 
-//                     <button onClick={removerProducto} className='botonCompraContext'>Eliminar del carrito</button>  
-//                     </div>                 
-//                     : 
-//                     <ItemCount header={'¿Para cuántas personas deseas reservar?:'} stock={stock} init={0} onAdd={finalizarCompra}/> }                                             
-//             </footer>      
-//         </div>
-//     </section>
-// )
 

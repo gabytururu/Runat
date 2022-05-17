@@ -12,8 +12,6 @@ export const CartContextProvider = ({ children }) => {
         setCart([...cart, productToAdd])
     }
 
-
-
     const qtyCartWidget = () => {
         let qtyCount = 0
         cart.forEach (prod => {
@@ -43,10 +41,9 @@ export const CartContextProvider = ({ children }) => {
         
         })
         return sumaCompra
-    }
+    }    
 
-    //---nueva funcion para q aparezca desde la cant en que estoy--
-
+    //funcion p ver desde la cant en que estoy
     const quantityProd = (id) => {
         return cart.find( prod => prod.id === id )?.quantity
     }

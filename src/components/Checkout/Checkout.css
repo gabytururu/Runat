@@ -1,25 +1,15 @@
-.formSection {
-    /* background-color: #F7F7F9; */
-    display: flex;
-    /* align-items: center; */
+.formSection {  
+    display: flex;   
     margin-top:40px;
-    justify-content: center;
-    /* min-height: 400px; */
-    /* min-width: 800px;   */
+    justify-content: center;    
 }
 
-
-.formContainer {
-   /* background-color: rgb(227, 255, 236); */
-   background-color: rgba(5, 183, 136, 0.115);  
-   /* background-color: rgba(134, 255, 197, 0.712); */
+.formContainer {  
+   background-color: rgba(5, 183, 136, 0.115);     
    border-radius: 5px; 
    max-width: 100%;
    width: 1050px;
-   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-   /* height: 100%; */
-   /* margin-top: 0px; */
-   /* margin-bottom: 150px; */
+   box-shadow: 0 2px 5px rgba(0,0,0,0.3);  
    border-top: 7px solid gold;
    border-bottom: 7px solid gold;
 }
@@ -40,18 +30,15 @@
     font-family: 'Times New Roman', Times, serif
 }
 
-
 .form {
-    padding: 20px 20px;
-    
+    padding: 20px 20px;    
 }
 
 .formInputs {
     margin-bottom: 18px;    
     font-size: 16px;
     font-weight: 500;
-    text-transform: capitalize;
-    /* padding-bottom: 2px;    */
+    text-transform: capitalize;    
 }
 
 .form input {
@@ -63,7 +50,6 @@
     font-size: 17px    
 }
 
-
 .botonCheckout {
     background-color: rgb(1, 61, 31);    
     border-radius: 8px;
@@ -74,18 +60,6 @@
     cursor: pointer;
     color: white
 }
-
-/* h2 {
-    color: white
-}
-
-p {
-    color: white
-} */
-
-/* h4 {
-    color: black
-} */
 
 .orderNumberMsj{
    margin-top: 20px;
@@ -107,6 +81,5 @@ p {
     color: black;
     font-style: italic;
     font-size: 22px;
-    margin-bottom: 35px
-    
+    margin-bottom: 35px    
 }

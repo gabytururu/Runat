@@ -63,11 +63,8 @@
 
 .itemCounter {
     width: 60%;
-    /* background-color: rgba(5, 183, 136, 0.115); */
     display: flex;
-    /* align-items: center; */
-    justify-content: center;
-    
+    justify-content: center;    
 }
 
 
@@ -91,7 +88,6 @@
 }
 
 .middleSection{
-    /* background-color: aqua; */
     margin-top:0px;
     font-size: 25px;
     padding: 10px;
@@ -120,9 +116,7 @@
 
 .buttonSection {
     display:flex;
-    /* /* align-items: center; */
     justify-content: center;
-    /* border: dotted 2px black */
 }
 
 .botonCambios {
@@ -134,8 +128,7 @@
     margin: 0px 4px 25px 0px;
     width: 180px;
     border: none;
-    cursor:pointer
-    
+    cursor:pointer    
 }
     
 .botonCompraContext {
@@ -149,35 +142,3 @@
     line-height: 1;   
     
 }
-
-
-
-/* .linkCarrito {
-    display:block;
-    color: white;
-    background-color: rgb(0, 97, 65);
-    padding: 0px;
-    margin:20px;   
-    border-radius: 5px;
-    max-width: 100%;
-    padding: 18px;  
-} */
-
-
-
-
-
-
-/* 
-.botonCambioReserva {
-    width: 55px;
-    height: 55px;
-    border-radius:50%;
-    font-size: 35px;
-} */
-
-/* 
-.text {
-    color: black;
-    text-transform: uppercase;
-} */

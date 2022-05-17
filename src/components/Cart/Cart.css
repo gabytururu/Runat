@@ -1,5 +1,4 @@
 
-
 .msjCierre {
     font-size: 30px;
     color: black;    
@@ -8,23 +7,14 @@
 }
 
 .CartTicket {
-    display: inline-block;
-    /* background-color: rgb(227, 255, 236); */
-    background-color: rgba(5, 183, 136, 0.115);      
-    /* max-width: 85%; */
+    display: inline-block;   
+    background-color: rgba(5, 183, 136, 0.115);         
     margin-bottom: 40px; 
     border-radius: 8px; 
     font-size: 35px;         
     border-top: solid 7px gold;
     border-bottom: solid 7px gold
 }
-
-/* .headerTitle {
-    font-size: 20px;
-    margin-top:15px;
-    padding: 2px;
-    color: black
-} */
 
 .header {
     background-color: #2b5742;
@@ -36,7 +26,6 @@
     border-radius: 8px;
     line-height: 1.7;  
 }
-
 
 .botonRemove {
     background-color: rgb(0, 207, 152);  
@@ -80,8 +69,7 @@
     border-radius: 8px;
     font-family: Arial;
     width: 250px;
-    height: 50px;
-    /* padding: 20px;     */
+    height: 50px;    
     margin: 20px 15px 0px 15px;    
     font-weight: 550; 
 }
@@ -136,55 +124,3 @@
     font-weight: 550; 
 }
 
-
-/* .header {
-    background-color: #2b5742;
-    color: white;
-    font-size: 20px;
-    font-style: italic;
-    margin: 30px 15px 30px 15px;
-    padding: 20px;
-    border-radius: 8px;
-    line-height: 1.7;  
-} */
-
-/* .botonVolver {
-    background-color: gold;    
-    border-radius: 8px;    
-    padding: 20px;
-    margin: 20px 8px 40px 15px;    
-    font-size: 20px;    
-    cursor: pointer;
-    color: black;
-    width: 250px;
-} */
-
-
-/* .botonUpdateColl {
-    background-color: rgb(253, 75, 75);    
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    font-size: 20px;    
-    cursor: pointer;
-    color: black
-} */
-
-/* h2 {
-    color: red;
-    font-size: 25px
-     
-} */
-
-/* 
-p {
-    color: black;
-    font-size: 22px;
-    font-style: italic;
-} */
-
-/* 
-title {
-    color: white
-} */

@@ -4,23 +4,15 @@
     margin-top: 22px
 }
 
-/* h1, h2, h3, p {
-    color: black;
-    font-size: 35px
-} */
-
 .box {
-    /* border: 1px solid rgba(5, 183, 136, 0); */
     background-color: rgba(5, 183, 136, 0.115);   
-    /* background-color: rgb(227, 255, 236);    */
     border-radius: 10px;
     border-top: 5px solid gold;
     border-bottom: 5px solid gold;
     max-width: 20%;
     display: inline-block;
     max-height: 60%;
-    margin: 0px 15px 25px 0px;
-    /* color: black        */
+    margin: 0px 15px 25px 0px;   
 }
 
 .botonCompra {
@@ -33,18 +25,11 @@
     margin-top: 25px
 }
 
-/* .card {
-    color: black
-} */
-
 .detallesProd {
     margin-bottom: 40px; 
     margin-top:20px;      
 }
-/* 
-p {
-    color: black
-} */
+
 .tour {
     color:  black;
     font-size: 20px;   
@@ -55,7 +40,6 @@ p {
     font-style: italic;
 }
 
-.precio {
-    /* color: black; */
+.precio {   
     font-size: 18px;
 }
