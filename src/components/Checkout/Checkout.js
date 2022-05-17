@@ -11,7 +11,6 @@ const Checkout = () => {
     //ojo input cambio a tel no?
     // const [input, setInput] = useState('')
     const [loading, setLoading] = useState(false)
-
     const [tel, setTel] = useState('')
     const [nombre, setNombre] =useState('')
     const [email, setEmail ] = useState('')
@@ -35,29 +34,29 @@ const Checkout = () => {
 //        date: new Date()
 //    }
 
-   const addDocToCollection = () => {
-       const collectionRefTesting = collection( firestoreDB, 'TestNuevaCollection')
+//    const addDocToCollection = () => {
+//        const collectionRefTesting = collection( firestoreDB, 'TestNuevaCollection')
        
-       const objNewBuyerTest = {
-           nombre: nombre,
-           tel: tel,
-           email: email,
-           products: cart,
-           total: sumaTotal(),
-           fecha: Timestamp.fromDate(new Date())
-       }
+//        const objNewBuyerTest = {
+//            nombre: nombre,
+//            tel: tel,
+//            email: email,
+//            products: cart,
+//            total: sumaTotal(),
+//            fecha: Timestamp.fromDate(new Date())
+//        }
 
-       addDoc(collectionRefTesting, objNewBuyerTest) 
-            .then(response => {
-                console.log(response.id)
-            })      
-    }
+//        addDoc(collectionRefTesting, objNewBuyerTest) 
+//             .then(response => {
+//                 console.log(response.id)
+//             })      
+//     }
 
-    const createOrderTest = () => {
+    const crearOrden = () => {
         
         setLoading(true)
 
-        const objNewBuyerTest = {
+        const ticketCompra = {
             products: cart,
             comprador: {
                 nombre: nombre,
@@ -87,8 +86,8 @@ const Checkout = () => {
                 })
             }).then (() => {
                     if(outOfStock.length === 0) {
-                        const collectionRef = collection(firestoreDB, 'ordersNuevas')
-                        return addDoc(collectionRef, objNewBuyerTest)
+                        const collectionRef = collection(firestoreDB, 'ordenesCompraRecibidas')
+                        return addDoc(collectionRef, ticketCompra)
                     }else {
                         return Promise.reject({name: 'outOfStockError', products: outOfStock})
                     }
@@ -112,7 +111,10 @@ const Checkout = () => {
    if (loading) {
        
     return(
-           <h1>Orden en proceso...</h1>
+        <div>
+           <h1>Estamos Procesando Tu Orden...</h1>
+           <img src="../images/sync.png" className="marca" alt="logo Runat"/>   
+        </div>
        )
    }
 
@@ -120,31 +122,31 @@ const Checkout = () => {
         e.preventDefault()
 
         // console.log(input)
-        console.log(nombre)
-        console.log(tel)
-        console.log(email)
+        // console.log(nombre)
+        // console.log(tel)
+        // console.log(email)
        
     }
 
-    const addDocCollectionCheckout = () => {
-        const collectionRefCheckout = collection (firestoreDB, 'collectionCheckout')
-        const objNewBuyerCheckout = {
-            nombre: nombre,
-            email: email,            
-            tel: tel,            
-            products: cart,
-            total: sumaTotal(),
-            fecha: Timestamp.fromDate(new Date())            
-        }
-        addDoc(collectionRefCheckout, objNewBuyerCheckout)
-            .then(response => {
-                console.log(response.id)
-                let orderId = response.id
-                setOrder(orderId)
-                console.log(`tu orden de compra es ${orderId}`)
+    // const addDocCollectionCheckout = () => {
+    //     const collectionRefCheckout = collection (firestoreDB, 'collectionCheckout')
+    //     const objNewBuyerCheckout = {
+    //         nombre: nombre,
+    //         email: email,            
+    //         tel: tel,            
+    //         products: cart,
+    //         total: sumaTotal(),
+    //         fecha: Timestamp.fromDate(new Date())            
+    //     }
+    //     addDoc(collectionRefCheckout, objNewBuyerCheckout)
+    //         .then(response => {
+    //             console.log(response.id)
+    //             let orderId = response.id
+    //             setOrder(orderId)
+    //             console.log(`tu orden de compra es ${orderId}`)
                 
-            })
-    }
+    //         })
+    // }
 
     
     return (
@@ -177,7 +179,7 @@ const Checkout = () => {
                                 </div>
                                 <div>                
                                     {/* <button type='submit' className='botonCheckout' onClick={() => addDocCollectionCheckout()}>SUBMIT</button>               */}
-                                    <button type='submit' className='botonCheckout' onClick={()=> createOrderTest()}>SUBMIT</button>              
+                                    <button type='submit' className='botonCheckout' onClick={()=> crearOrden()}>SUBMIT</button>              
                                 </div>                    
                        
                                 {/* <div className='formInputs'>
