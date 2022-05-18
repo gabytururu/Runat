@@ -10,17 +10,13 @@ const ItemCount = (props) => {
     const addProd = () => {       
             if (itemCount < props.stock) {     
             setItemCount(itemCount + 1)           
-            } else {
-                console.log ('El max de stock ha sido alcanzado - no hay más inventario')               
-            }
+            } 
         }
 
     const removeProd = () => {      
             if (itemCount > props.init) {            
             setItemCount (itemCount - 1)
-            } else {
-                console.log('el min de reservaciones no puede ser menor a uno')                
-            }
+            }        
         }
         
        
@@ -30,6 +26,9 @@ const ItemCount = (props) => {
                 <div>                       
                     <p className ="numPersonas">{props.header}</p>
                     <p className ="qtyTotal">{itemCount}</p>
+                    <div className='maxStock'>
+                        <small>*Nota: Sólo es posible reservar -como máximo- el número de espacios <br></br> que aún quedan disponibles en el tour*</small>
+                    </div>
                     <div className="buttonsCountContainer">
                         <button className = "buttonChange" onClick={removeProd}><strong>(-)</strong><br></br>Reducir</button>
                         <button className = "buttonChange" onClick={addProd}><strong>(+)</strong><br></br>Aumentar</button>
