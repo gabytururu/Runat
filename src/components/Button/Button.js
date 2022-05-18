@@ -1,12 +1,12 @@
 //----------- test realizado para ver si hace algo ... Resultado : No hace nada -- OK eliminar componente p entrega final
-const Button = (props) => {
+// const Button = (props) => {
 
-    return(
+//     return(
 
-        <button className="Button" onClick={props.callback}>{props.label}</button>
+//         <button className="Button" onClick={props.callback}>{props.label}</button>
 
-    )
+//     )
 
-}
+// }
 
-export default Button
+// export default Button
