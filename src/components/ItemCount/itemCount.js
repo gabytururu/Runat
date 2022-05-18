@@ -11,7 +11,7 @@ const ItemCount = (props) => {
             if (itemCount < props.stock) {     
             setItemCount(itemCount + 1)           
             } else {
-                console.log ('no hay suficiente inventario')               
+                console.log ('El max de stock ha sido alcanzado - no hay más inventario')               
             }
         }
 
@@ -19,8 +19,7 @@ const ItemCount = (props) => {
             if (itemCount > props.init) {            
             setItemCount (itemCount - 1)
             } else {
-                console.log('el inventario  no puede ser menor a cero')
-                
+                console.log('el min de reservaciones no puede ser menor a uno')                
             }
         }
         

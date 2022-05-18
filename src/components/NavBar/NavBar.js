@@ -1,4 +1,3 @@
-
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link, NavLink} from 'react-router-dom'
@@ -22,7 +21,7 @@ const NavBar = () => {
     }, [])
     
     const {qtyCartWidget} = useContext(CartContext)
-    console.log(qtyCartWidget())
+   
 
     return(                             
                <nav className="NavBar">

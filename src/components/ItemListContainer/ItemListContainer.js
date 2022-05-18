@@ -19,13 +19,11 @@ const ItemListContainer = (props) => {
         ? query (collection(firestoreDB, 'products'), where('category', '==', categoryId),)       
         : collection(firestoreDB, 'products')
 
-        getDocs(collectionRef).then(response => {
-            console.log(response)
+        getDocs(collectionRef).then(response => {           
             const products = response.docs.map( doc => {         
                 return { id: doc.id, ...doc.data()}
             })          
-
-            console.log(products)            
+                  
             setProducts(products)
             setLoading(false)
             categoryId?setTitle('Tours disponibles de ' + categoryId ):setTitle('Todas las Actividades a tu Alcance')                    

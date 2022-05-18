@@ -4,13 +4,10 @@ import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/itemCount'
 import CartContext  from '../Context/CartContext'
 import { useNotification } from '../Notification/Notification'
-import Cart from '../Cart/Cart'
-
-
 
 const Details = ({id, name, category, description, img, serviciosBrindados, price, puntoPartida, fechas, reserva, stock}) => {
         
-        const { addItem, isInCart, clearCart, removeItem, cart, quantityProd } = useContext(CartContext)
+        const { addItem, isInCart, clearCart, removeItem, cart } = useContext(CartContext)
         
         const { setNotification } = useNotification()
       

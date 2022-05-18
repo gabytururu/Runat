@@ -1,15 +1,13 @@
 import './Cart.css'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import CartContext from '../Context/CartContext'
 import { Link } from 'react-router-dom'
-import { addDoc, collection, Timestamp , updateDoc, doc, deleteField, writeBatch, getDocs, query, where, documentId } from 'firebase/firestore'
-import { firestoreDB } from '../../services/firebase/index'
 import CartItem from '../CartItem/CartItem'
 
 const Cart = () => {
 
 
-    const { cart, removeItem, sumaTotal, clearCart } = useContext (CartContext)    
+    const { cart, sumaTotal, clearCart } = useContext (CartContext)    
 
        if (cart.length === 0) {
         return (
@@ -19,9 +17,6 @@ const Cart = () => {
             </div>             
             )
         }
-
-    console.log(sumaTotal(cart))    
-
   
     return (
         <div>   

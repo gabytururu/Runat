@@ -56,11 +56,9 @@ const Checkout = () => {
                     }
             
             }).then(({id}) => {
-                    batch.commit()
-                    console.log(`tu orden es la ${id}`)
+                    batch.commit()                    
                     let orderId = id
-                    setOrder(orderId)
-                    console.log(`tu orden es la ${orderId} link al state`)
+                    setOrder(orderId)                  
 
             }).catch(error => {
                     console.log(error)

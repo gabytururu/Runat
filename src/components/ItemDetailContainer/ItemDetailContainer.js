@@ -12,8 +12,7 @@ const ItemDetailContainer = () => {
   
     
     useEffect (() => {         
-        getDoc(doc(firestoreDB, 'products', productId)).then(response => {
-            console.log(response)        
+        getDoc(doc(firestoreDB, 'products', productId)).then(response => {                
             const product = { id: response.id, ...response.data()}
         setItemsDetails(product)
         })

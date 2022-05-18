@@ -5,9 +5,8 @@ const CartContext = createContext()
 
 export const CartContextProvider = ({ children }) => {
     
-    const [cart, setCart] = useState ([])    
-    console.log(cart)
-
+    const [cart, setCart] = useState ([])   
+    
     const addItem = (productToAdd) => {
         setCart([...cart, productToAdd])
     }
@@ -28,8 +27,7 @@ export const CartContextProvider = ({ children }) => {
         setCart([])
     }
 
-    const removeItem = (id) => {
-        console.log(id + ' removed')
+    const removeItem = (id) => {       
         const products = cart.filter(prod => prod.id !== id)
         setCart(products)
     }
@@ -43,14 +41,10 @@ export const CartContextProvider = ({ children }) => {
         return sumaCompra
     }    
 
-    //funcion p ver desde la cant en que estoy
-    const quantityProd = (id) => {
-        return cart.find( prod => prod.id === id )?.quantity
-    }
 
 
     return (        
-        <CartContext.Provider value= {{cart, addItem, qtyCartWidget, isInCart, clearCart, removeItem, sumaTotal, quantityProd}}>
+        <CartContext.Provider value= {{cart, addItem, qtyCartWidget, isInCart, clearCart, removeItem, sumaTotal}}>
             {children}
         </CartContext.Provider>
     )
