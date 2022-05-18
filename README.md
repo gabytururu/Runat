@@ -2,17 +2,22 @@
 
 Este proyecto fue creado para la entrega final del curso de React en CoderHouse. 
 La versión final está disponible en XXXX GITHUB XXXXXXXXXX
-Si desea ver un recorrido básico de cómo funciona la aplicación puede verlo en este xxxxxx GIF
+El gif/video con el recorrido básico de cómo funciona la aplicación está disponible en --> public\images\gifNavegacion.gif
+---> liga alternativa online / gif-video de navegación básica de sitio:
+---> https://www.canva.com/design/DAFBA4JLWTs/IR_DD9P8XULCfL7_7DHqJw/watch?utm_content=DAFBA4JLWTs&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel
 
 
 # RumboNaturaleza (RUNAT)
 ## _E-Commerce para reservar tours y actividades outdoors_
 
-Rumbo Naturaleza es una aplicación de e-commerce realizada en ReactJS y motorizada por firebase para la gestión de las ordenes de compra e inventarios de los tours disponibles. 
-El objetivo principal del flujo de procesos de la aplicación es generar una orden de compra que sea almacenada (en firebase) y que impacte el stock total disponible de cada uno de los productos (o tours en el caso de este proyecto. Los conceptos de "tour" y "producto" se utilizarán en la documentación de forma intercambiable pues representan lo mismo). 
+Rumbo Naturaleza es una aplicación de e-commerce realizada en ReactJS y motorizada por firebase para la gestión de  ordenes de compra e inventarios de los tours outdoors disponibles. 
+
+El objetivo principal del flujo de procesos de la aplicación es generar una orden de compra que sea almacenada (en firebase) y que impacte el stock total disponible de cada uno de los productos (*o tours en el caso de este proyecto). 
+
+*Los conceptos de "tour" y "producto" se utilizarán en la documentación de forma intercambiable pues representan lo mismo. 
 
 ## Proceso de Compra/ Flow de procesos
-El flujo de procesos para realizar un proceso de compra es el siguiente:
+El flujo de procesos para realizar una compra compra es el siguiente:
 0. Inicializar la aplicación (npm start) --> esto renderizará todo el menú de tours disponibles en RumboNaturaleza
     - Para renderizar las cards de los tours disponibles, la aplicación se apoyará en los estados "products, loading y title"; Así como en un useEffect el cual contiene las rutas necesarias para acceder al database de firestore (firestoreDB), retornar  los detalles de los tours disponibles(a través del uso de un Map), y colocarlos en las cards o fichas previstas por la estructura incluida en el return/JSX.  
     - En este mismo proceso, la aplicación llamará/cargara el componente ItemListcontainer y a los componentes hijos asociados a este componente principal --> ItemList -->Item. 
