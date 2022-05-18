@@ -3,7 +3,7 @@
 Este proyecto fue creado para la entrega final del curso de React en CoderHouse. 
 La versión final está disponible en XXXX GITHUB XXXXXXXXXX
 El gif/video con el recorrido básico de cómo funciona la aplicación está disponible en --> public\images\gifNavegacion.gif
----> liga alternativa online / gif-video de navegación básica de sitio:
+---> liga alternativa online del gif-video de navegación básica de sitio:
 ---> https://www.canva.com/design/DAFBA4JLWTs/IR_DD9P8XULCfL7_7DHqJw/watch?utm_content=DAFBA4JLWTs&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel
 
 
